@@ -1,0 +1,16 @@
+.container{
+  display: flex;
+}
+
+.card{
+  margin: 10px auto;
+  border-radius: 5px;
+  background-color: lightblue;
+  width: 50vh;
+
+  img{
+    height: 30vh;
+  }
+}
+
+

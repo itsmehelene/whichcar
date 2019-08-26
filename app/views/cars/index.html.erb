@@ -1,15 +1,26 @@
 <div class="container">
-<%@cars.each do |car|%>
-<%=car.model%><br>
-<%=car.passengers%><br>
-<%=car.brand%><br>
-<%=car.year%><br>
-<%=car.fuel%><br>
-<%=car.critair%><br>
-<%=car.gearbox%><br>
-<%=car.trunk_size%><br>
-<%=car.car_type%><br>
-<%=car.price%><br>
------------------------------------<br>
-<%end%>
+  <%@cars.each do |car|%>
+    <div class="card">
+      <img src="https://www.miniusa.com/content/dam/mini/microconfig/cooper/cooper_iconic_c1b.png" alt="mini cooper">
+      <h2><%=car.brand%></h2>
+      <br>
+      <h3><%=car.model%></h4>
+      <br>
+      <h4>Type: <%=car.car_type%></h4>
+      <br>
+      <h4>Passengers: <%=car.passengers%></h4>
+      <br>
+      <h4>Year: <%=car.year%></h4>
+      <br>
+      <h4>Fuel: <%=car.fuel%></h4>
+      <br>
+      <h4>Crit'air: <%=car.critair%></h4>
+      <br>
+      <h4>Gearbox: <%=car.gearbox%></h4>
+      <br>
+      <h4>Trunk size: <%=car.trunk_size%></h4>
+      <br>
+      <h4><%=car.price%> €</h4><br>
+    </div>
+  <%end%>
 </div>
