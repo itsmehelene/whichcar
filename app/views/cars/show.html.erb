@@ -9,4 +9,5 @@
 <%=@car.trunk_size%><br>
 <%=@car.car_type%><br>
 <%=@car.price%><br>
+<%=link_to "add to fave",car_favourites_path(@car),method: :post%>
 </div>
