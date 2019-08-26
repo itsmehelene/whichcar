@@ -1,10 +1,10 @@
 <div class="container">
+
   <%@cars.each do |car|%>
     <div class="card">
-      <img src="https://www.miniusa.com/content/dam/mini/microconfig/cooper/cooper_iconic_c1b.png" alt="mini cooper">
+      <%= image_tag "#{car.photo}" %><br>
       <h2><%=car.brand%></h2>
-      <br>
-      <h3><%=car.model%></h4>
+      <h3><%=car.model%></h3>
       <br>
       <h4>Type: <%=car.car_type%></h4>
       <br>
@@ -18,9 +18,8 @@
       <br>
       <h4>Gearbox: <%=car.gearbox%></h4>
       <br>
-      <h4>Trunk size: <%=car.trunk_size%></h4>
+      <h4>Trunk size: <%=car.trunk_size%> L</h4>
       <br>
-      <h4><%=car.price%> €</h4><br>
+      <h2><%=car.price%> €</h2><br>
     </div>
   <%end%>
-</div>

@@ -1,13 +1,15 @@
-.container{
+body .container{
   display: flex;
+  margin:0 auto;
 }
 
 .card{
-  margin: 10px auto;
+  margin: 10px 10px;
   border-radius: 5px;
   background-color: lightblue;
   width: 50vh;
-
+  // h2{
+  // }
   img{
     height: 30vh;
   }
