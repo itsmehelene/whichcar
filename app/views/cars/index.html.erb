@@ -1,16 +1,27 @@
-<div class="container">
-<%@cars.each do |car|%>
-<%=car.model%><br>
-<%=car.passengers%><br>
-<%=car.brand%><br>
-<%=car.year%><br>
-<%=car.fuel%><br>
-<%=car.critair%><br>
-<%=car.gearbox%><br>
-<%=car.trunk_size%><br>
-<%=car.car_type%><br>
-<%=car.price%><br>
-<%= image_tag "#{car.photo}"  %><br>
------------------------------------<br>
-<%end%>
+<div class="container_cards">
+  <%@cars.each do |car|%>
+    <div class="card">
+        <div>
+          <%= image_tag "#{car.photo}" %><br>
+          <div class="cards_infos">
+            <h2><%=car.brand%> - <%=car.model%></h2>
+              <br>
+              <h5>Type: <%=car.car_type%></h5>
+
+              <!-- <h5>Passengers: <%=car.passengers%></h5> -->
+             <!--  <br> -->
+              <!-- <h5>Year: <%=car.year%></h5> -->
+              <!-- <br> -->
+              <h5>Fuel: <%=car.fuel%></h5>
+              <!-- <h5>Crit'air: <%=car.critair%></h5> -->
+            <!--   <br> -->
+              <!-- <h5>Gearbox: <%=car.gearbox%></h5> -->
+            <!--   <br> -->
+              <!-- <h5>Trunk size: <%=car.trunk_size%> L</h5> -->
+           <!--    <br> -->
+              <h2><%=car.price%> €</h2><br>
+          </div>
+        </div>
+    </div>
+  <%end%>
 </div>

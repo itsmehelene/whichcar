@@ -24,8 +24,7 @@ Car.create!(
   trunk_size: 380,
   car_type:"Citadine",
   photo: "golf.jpg",
-  price: 15990
-)
+  price: 15990)
 
 Car.create!(
   model:"Model S",
@@ -40,6 +39,7 @@ Car.create!(
   photo: "modelS.jpg",
   price: 52990
   )
+
 
 Car.create!(
   model:"Land Cruiser",
@@ -274,3 +274,4 @@ Car.create!(
   car_type:"SUV",
   photo: "gmc.jpg",
   price: 80900)
+
