@@ -24,8 +24,7 @@ Car.create!(
   trunk_size: 380,
   car_type:"Citadine",
   photo: "golf.jpg",
-  price: 15990
-)
+  price: 15990)
 
 Car.create!(
   model:"Model S",
@@ -244,3 +243,4 @@ Car.create!(
 # #   trunk_size: ,
 # #   car_type:"",
 # #   price: )
+
