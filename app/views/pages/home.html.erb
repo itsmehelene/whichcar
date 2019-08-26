@@ -1,2 +1,24 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Enter your criterias</h1>
+
+<%= form_for :search, url: cars_path, method: :get do |f| %>
+  <%= f.label :year %>
+  <%= f.text_field :year %><br>
+
+  <%= f.label :passengers %>
+  <%= f.text_field :passengers %><br>
+
+  <%= f.label :fuel %>
+  <%= f.text_field :fuel %><br>
+
+  <%= f.label :critair %>
+  <%= f.text_field :critair %><br>
+
+  <%= f.label :gearbox %>
+  <%= f.text_field :gearbox %><br>
+
+  <%= f.label :price %>
+  <%= f.text_field :price %><br>
+
+
+  <%= f.submit%>
+<% end %>
