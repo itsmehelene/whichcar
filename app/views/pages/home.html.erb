@@ -1,8 +1,14 @@
+<!-- <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('assets/banner-bkg.jpg');">
+  <div class="container">
+    <h1>WhichCar?</h1>
+  </div>
+</div> -->
+
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+  <div class="row justify-content-center">
+    <div class="col-xs-12 col-sm-6">
       <div class="form-post">
-        <h1>Build you dream car</h1>
+        <h2>Build you dream car</h2>
 
           <%= simple_form_for :search, url: cars_path, method: :get do |f| %>
             <%= f.input :ecology, collection: ["A lot", "A little bit", "Not really"], as: :check_boxes, label: 'How much do you care about ecology ?' %>

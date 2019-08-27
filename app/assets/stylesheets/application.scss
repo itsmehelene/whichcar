@@ -11,4 +11,12 @@
 
 // Your CSS partials
 @import "components/*";
-@import "pages/*"
+@import "pages/*";
+
+
+body.pages.home {
+  background-image: url('option1.jpg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
