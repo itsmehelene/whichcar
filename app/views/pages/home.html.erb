@@ -11,7 +11,10 @@
           <%= f.input :passenger, collection: [2, 5, 8], as: :check_boxes %>
           <%= f.input :gearbox, collection: ["Auto", "Manual"], as: :check_boxes %>
           <%= f.input :group, collection: ["Yes", "No"], as: :check_boxes %>
-          <%= f.input :price %>
+          <span class="multi-range">
+            <input name="search[min_price]" type="range" min="0" max="50" value="5" id="lower">
+            <input name="search[max_price]" type="range" min="0" max="50" value="45" id="upper">
+          </span><br>
           <%= f.submit "Find cars", class: "btn btn-primary" %>
           <% end %>
       </div>

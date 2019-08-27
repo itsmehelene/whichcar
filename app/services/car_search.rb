@@ -1,4 +1,5 @@
 class CarSearch
+  skip_before_action :authenticate_user!
   def initialize(params)
     @params = params
     @cars = Car.all
