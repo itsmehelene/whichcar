@@ -13,23 +13,16 @@
           <div class="cards_infos">
             <h5><%=car.brand%> - <%=car.model%></h5>
               <p>Type: <%=car.car_type%></p>
-              <!-- <p>Passengers: <%=car.passengers%></p> -->
-             <!--  <br> -->
-              <!-- <p>Year: <%=car.year%></p> -->
-              <!-- <br> -->
               <p>Fuel: <%=car.fuel%></p>
-              <!-- <p>Crit'air: <%=car.critair%></p> -->
-            <!--   <br> -->
-              <!-- <p>Gearbox: <%=car.gearbox%></p> -->
-            <!--   <br> -->
-              <!-- <p>Trunk size: <%=car.trunk_size%> L</p> -->
-              <h4><%=car.price%> €</h3>
+              <h4><%=car.price%> €</h4>
           </div>
+
           <div class='options'>
-           <label class="check_container">
-             <input type="checkbox" value="<%= car.id %>" name="compare[]" >
+
+          <label class="check_container">
+             <input type="checkbox" value="<%= car.id %>"    name="compare[]" >
              <span class="checkmark"></span>
-           </label>
+          </label>
 
             <button type="button" class="btn-blue"><%= link_to "See More >" %></button>
 
@@ -38,6 +31,4 @@
       <%end%>
     </div>
   </div>
-
-
 </form>
