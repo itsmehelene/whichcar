@@ -1,15 +1,36 @@
+body.cars.compare{
+  background-color: white;
 .container_compare{
   position: absolute;
-  width: 80%;
-  height: 100%;
+  width: 50%;
   z-index: 15;
   top: 30%;
-  left: 20%;
-  margin: -100px 0 0 -150px;
+  left: 35%;
+  margin: -100px 0 40px -150px;
 
+  .compare-items{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 90px;
+  margin-bottom:80px;
+  padding-top: 20px;
+  text-align: center;
+  }
 }
 .photos{
-  margin: 10px 40px;
-  position:relative;
-  left: 14%;
+  margin-bottom: 30px;
+}
+.gear_photo{
+  width: 60px;
+  height: 60px;
+}
+.fuel_photo{
+  width: 100px;
+  height: 80px;
+}
+.critair_photo{
+  width: 100px;
+  height: 100px;
+}
 }
