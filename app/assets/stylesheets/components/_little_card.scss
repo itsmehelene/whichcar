@@ -1,0 +1,25 @@
+.container_cards {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.card {
+  width: 382px;
+  margin: 30px;
+  border-radius: 5px;
+  background-color: $our-color;
+
+
+  img {
+    width: 380px;
+    height: 180px;
+    border-radius: 5px 5px 0 0;
+  }
+}
+
+.cards_infos {
+  text-align: center;
+}
+
+

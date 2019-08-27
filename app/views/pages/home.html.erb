@@ -1,28 +1,23 @@
-<h1>Enter your criterias</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <div class="form-post">
+        <h1>Build you dream car</h1>
 
-<%= form_for :search, url: cars_path, method: :get do |f| %>
-  <%= f.label :year %>
-  <%= f.text_field :year %><br>
-
-  <%= f.label :passengers %>
-  <%= f.text_field :passengers %><br>
-
-  <%= f.label :fuel %>
-  <%= f.text_field :fuel %><br>
-
-  <%= f.label :critair %>
-  <%= f.text_field :critair %><br>
-
-  <%= f.label :gearbox %>
-  <%= f.text_field :gearbox %><br>
-
-  <%= f.label :price %>
-
-  <span class="multi-range">
-    <input name="search[min_price]" type="range" min="0" max="50" value="5" id="lower">
-    <input name="search[max_price]" type="range" min="0" max="50" value="45" id="upper">
-  </span><br>
-
-
-  <%= f.submit%>
-<% end %>
+          <%= simple_form_for :search, url: cars_path, method: :get do |f| %>
+          <div class="category-choices">
+          <%= f.input :ecology, collection: ["Not really", "A little bit", "A lot"], as: :check_boxes %>
+          </div>
+          <%= f.input :passenger, collection: [2, 5, 8], as: :check_boxes %>
+          <%= f.input :gearbox, collection: ["Auto", "Manual"], as: :check_boxes %>
+          <%= f.input :group, collection: ["Yes", "No"], as: :check_boxes %>
+          <span class="multi-range">
+            <input name="search[min_price]" type="range" min="0" max="50" value="5" id="lower">
+            <input name="search[max_price]" type="range" min="0" max="50" value="45" id="upper">
+          </span><br>
+          <%= f.submit "Find cars", class: "btn btn-primary" %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
