@@ -17,7 +17,11 @@
   <%= f.text_field :gearbox %><br>
 
   <%= f.label :price %>
-  <%= f.text_field :price %><br>
+
+  <span class="multi-range">
+    <input name="search[min_price]" type="range" min="0" max="50" value="5" id="lower">
+    <input name="search[max_price]" type="range" min="0" max="50" value="45" id="upper">
+  </span><br>
 
 
   <%= f.submit%>
