@@ -24,7 +24,12 @@
               <h4><%=car.price%> €</h3>
           </div>
           <div class='options'>
-            <button type="text" class="text"><%= link_to "See More >" %></button>
+           <label class="check_container">
+             <input type="checkbox">
+             <span class="checkmark"></span>
+           </label>
+
+            <button type="button" class="btn-blue"><%= link_to "See More >" %></button>
           </div>
         </div>
       <!-- </div> -->
