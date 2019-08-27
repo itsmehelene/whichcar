@@ -15,8 +15,6 @@
     margin: 30px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     padding: 5px;
-    height: 150px;
-    // align-items: center;
 
     .photo{
       display: flex;
@@ -30,16 +28,29 @@
       }
     }
 
-  .cards_infos {
-    padding-left: 25px;
+    .cards_infos {
+      padding-left: 25px;
+      flex-grow: 1;
 
-    h3 {
-      display:flex;
+      h3 {
+        display:flex;
+        align-items: flex-end;
+      }
+    }
+
+    .options {
+      display: flex;
       align-items: flex-end;
+      position: relative;
+      width: 160px;
+      justify-content: flex-end;
+
+      .check_container{
+        position: absolute;
+        top: 0;
+        right: -9px;
+      }
     }
   }
-
-  }
 }
-
 

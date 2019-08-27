@@ -12,5 +12,15 @@
 // Your CSS partials
 @import "components/*";
 @import "pages/*";
+
 @import "sweetalert";
 @import "sweetalert/themes/twitter";
+
+
+
+body.pages.home {
+  background-image: image-url('option1.jpg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
