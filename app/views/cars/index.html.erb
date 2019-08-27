@@ -1,12 +1,14 @@
-<div class="container_cards">
-  <div class="all_cards">
-    <%@cars.each do |car|%>
-      <!-- <div data-aos="flip-right"> -->
-        <div class="card_car">
+<form action="/cars/compare">
+    <input type="submit" value="Compare" class="btn btn-primary">
+  <div class="container_cards">
+    <div class="all_cards">
+      <% @cars.each do |car|%>
+        <!-- <div data-aos="flip-right"> -->
+          <div class="card_car">
 
-          <div class="photo">
-            <%= image_tag "#{car.photo}" %>
-          </div>
+            <div class="photo">
+              <%= image_tag "#{car.photo}" %>
+            </div>
 
           <div class="cards_infos">
             <h5><%=car.brand%> - <%=car.model%></h5>
@@ -25,14 +27,17 @@
           </div>
           <div class='options'>
            <label class="check_container">
-             <input type="checkbox">
+             <input type="checkbox" value="<%= car.id %>" name="compare[]" >
              <span class="checkmark"></span>
            </label>
 
             <button type="button" class="btn-blue"><%= link_to "See More >" %></button>
+
           </div>
-        </div>
-      <!-- </div> -->
-    <%end%>
+        <!-- </div> -->
+      <%end%>
+    </div>
   </div>
-</div>
+
+
+</form>

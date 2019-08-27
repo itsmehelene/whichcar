@@ -9,6 +9,10 @@ class CarsController < ApplicationController
     @car = Car.find(params[:id])
   end
 
+  def compare
+    @cars = Car.where(id: params[:compare])
+  end
+
   private
 
   def car_params

@@ -1,0 +1,7 @@
+<h1 style="text-align: center">Compare Cars</h1>
+<div class="container_compare">
+    <%@cars.each do |car|%>
+    <tr><%=image_tag car.photo,class: 'photos'%></tr>
+    <%end%>
+    <hr>
+</div>
