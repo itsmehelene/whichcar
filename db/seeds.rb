@@ -116,7 +116,7 @@ Car.create!(
   gearbox:"Manual",
   trunk_size: 100,
   car_type:"Berline",
-  photo: "2cv",
+  photo: "2cv.jpg",
   price: 6500)
 
 Car.create!(
