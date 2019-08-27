@@ -1,25 +1,45 @@
 .container_cards {
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+  margin: 0 40px;
 }
 
-.card {
-  width: 382px;
-  margin: 30px;
-  border-radius: 5px;
-  background-color: $our-color;
+.all_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
+  .card_car {
+    display: flex;
+    border-radius: 5px;
+    background-color: $our-color;
+    margin: 30px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    padding: 5px;
+    height: 150px;
+    // align-items: center;
 
-  img {
-    width: 380px;
-    height: 180px;
-    border-radius: 5px 5px 0 0;
+    .photo{
+      display: flex;
+      align-items: center;
+      margin-left: 15px;
+
+      img {
+        border-radius: 5px 5px 0 0;
+        width:200px;
+        height: 140px;
+      }
+    }
+
+  .cards_infos {
+    padding-left: 25px;
+
+    h3 {
+      display:flex;
+      align-items: flex-end;
+    }
   }
-}
 
-.cards_infos {
-  text-align: center;
+  }
 }
 
 

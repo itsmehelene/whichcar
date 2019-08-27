@@ -1,27 +1,33 @@
 <div class="container_cards">
-  <%@cars.each do |car|%>
-    <div class="card">
-        <div>
-          <%= image_tag "#{car.photo}" %><br>
-          <div class="cards_infos">
-            <h2><%=car.brand%> - <%=car.model%></h2>
-              <br>
-              <h5>Type: <%=car.car_type%></h5>
+  <div class="all_cards">
+    <%@cars.each do |car|%>
+      <!-- <div data-aos="flip-right"> -->
+        <div class="card_car">
 
-              <!-- <h5>Passengers: <%=car.passengers%></h5> -->
+          <div class="photo">
+            <%= image_tag "#{car.photo}" %>
+          </div>
+
+          <div class="cards_infos">
+            <h5><%=car.brand%> - <%=car.model%></h5>
+              <p>Type: <%=car.car_type%></p>
+              <!-- <p>Passengers: <%=car.passengers%></p> -->
              <!--  <br> -->
-              <!-- <h5>Year: <%=car.year%></h5> -->
+              <!-- <p>Year: <%=car.year%></p> -->
               <!-- <br> -->
-              <h5>Fuel: <%=car.fuel%></h5>
-              <!-- <h5>Crit'air: <%=car.critair%></h5> -->
+              <p>Fuel: <%=car.fuel%></p>
+              <!-- <p>Crit'air: <%=car.critair%></p> -->
             <!--   <br> -->
-              <!-- <h5>Gearbox: <%=car.gearbox%></h5> -->
+              <!-- <p>Gearbox: <%=car.gearbox%></p> -->
             <!--   <br> -->
-              <!-- <h5>Trunk size: <%=car.trunk_size%> L</h5> -->
-           <!--    <br> -->
-              <h2><%=car.price%> €</h2><br>
+              <!-- <p>Trunk size: <%=car.trunk_size%> L</p> -->
+              <h4><%=car.price%> €</h3>
+          </div>
+          <div class='options'>
+            <button type="text" class="text"><%= link_to "See More >" %></button>
           </div>
         </div>
-    </div>
-  <%end%>
+      <!-- </div> -->
+    <%end%>
+  </div>
 </div>
