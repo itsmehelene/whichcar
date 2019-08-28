@@ -3671,6 +3671,11 @@ isstream@~0.1.2:
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
   integrity sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=
 
+jquery-nstslider@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/jquery-nstslider/-/jquery-nstslider-1.0.4.tgz#cd1de9d6da2ea0726a7b05ab1a8183e2c90b68e2"
+  integrity sha1-zR3p1touoHJqewWrGoGD4skLaOI=
+
 jquery@^3.4.1:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
