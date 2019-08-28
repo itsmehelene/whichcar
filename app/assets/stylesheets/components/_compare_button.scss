@@ -1,0 +1,12 @@
+.sidebar {
+  /* Element will be 'fixed' when it ... */
+  position: -webkit-sticky;
+  position: sticky;
+  /* ... is 10px from the top of the viewport */
+  top: 15%;
+  -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}

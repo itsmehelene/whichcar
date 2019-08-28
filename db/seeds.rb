@@ -1,4 +1,5 @@
 Car.destroy_all
+2.times do
 Car.create!(
   model:"308",
   passengers: 4,
@@ -275,3 +276,4 @@ Car.create!(
   photo: "gmc.jpg",
   price: 80900)
 
+end
