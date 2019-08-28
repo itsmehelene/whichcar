@@ -7,11 +7,16 @@
     <title>Which Car</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <%= stylesheet_link_tag 'application', media: 'all' %>
+
      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link type="text/css" rel="stylesheet" href="/dist/jquery.nstSlider.css">
-    <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+    <%= stylesheet_pack_tag 'application', media: 'all' %>
+
+
   </head>
+
   <body class="<%= controller_name %> <%= action_name %>">
     <%= render 'shared/navbar' %>
     <%= yield %>
@@ -25,7 +30,8 @@
     <script src="path/to/smooth-scroll.polyfills.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-    AOS.init();
+    AOS.init({
+    });
     </script>
   </body>
 </html>
