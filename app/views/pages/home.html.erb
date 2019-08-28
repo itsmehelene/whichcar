@@ -6,23 +6,59 @@
 
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-xs-12 col-sm-8 col-lg-12 col-xl-12">
       <div class="form-post">
         <h2>Build you dream car</h2>
 
-          <%= simple_form_for :search, url: cars_path, method: :get do |f| %>
-            <%= f.input :ecology, collection: ["A lot", "A little bit", "Not really"], as: :check_boxes, label: 'How much do you care about ecology ?' %>
-            <%= f.input :passenger, collection: [2, 5, 8], as: :check_boxes, label: 'How many people do you carry in you car ?' %>
-            <%= f.input :gearbox, collection: ["Auto", "Manual"], as: :check_boxes, label: 'Manual or Auto ?' %>
-            <%= f.input :group, collection: ["Yes", "No"], as: :check_boxes, label: 'Do you often travel with big groups ?' %>
+        <%= simple_form_for :search, url: cars_path, method: :get, remote: true do |f| %>
 
-            <span class="multi-range">
-              <input name="search[min_price]" type="range" min="0" max="50" value="5" id="lower">
-              <input name="search[max_price]" type="range" min="0" max="50" value="45" id="upper">
-            </span><br>
-            <%= f.submit "Find cars", class: "btn btn-primary" %>
-        <% end %>
+        <div class="surveystepp" id="1">
+          <div class="input">
+          <%= f.input :passenger, collection: ["2", "5", "+5"], as: :check_boxes, label: 'How many passengers ?' %>
+          <a href="#2" class="btn btn-primary">Next</a>
+          </div>
+        </div>
+
+        <div class="surveystepi" id="2">
+          <div class="input">
+          <%= f.input :gearbox, collection: ["Auto", "Manual"], as: :check_boxes, label: 'What gearbox do you want ?' %>
+           <a href="#3" class="btn btn-primary">Next</a>
+           </div>
+        </div>
+
+        <div class="surveystepp" id="3">
+          <div class="input">
+          <%= f.input :ecology, collection: ["Yes", "No"], as: :check_boxes, label: 'Do you want your car eco friendly ?' %>
+           <a href="#4" class="btn btn-primary">Next</a>
+           </div>
+        </div>
+
+        <div class="surveystepi" id="4">
+          <div class="input">
+          <%= f.input :items, collection: ["🧳", " 🧳 🧳", " 🧳 🧳 🧳"], as: :check_boxes, label: 'Will you carry a lot of items?' %>
+          <a href="#5" class="btn btn-primary">Next</a>
+          </div>
+        </div>
+
+        <div class="surveystepp" id="5">
+          <div class="input">
+         <%= f.input :road, collection: ["In the city", "On the highway"], as: :check_boxes, label: 'Where do you often drive ?' %>
+          <a href="#6" class="btn btn-primary">Next</a>
+          </div>
+       </div>
+
+
+       <div class="surveystepi" id="6">
+        <div class="input">
+        <span class="multi-range">
+          <input name="search[min_price]" type="range" min="0" max="50" value="5" id="lower">
+          <input name="search[max_price]" type="range" min="0" max="50" value="45" id="upper">
+        </span><br>
+        <%= f.submit "Find cars", class: "btn btn-primary" %>
+        </div>
       </div>
+      <% end %>
     </div>
   </div>
+</div>
 </div>

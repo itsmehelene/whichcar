@@ -1,12 +1,12 @@
 body.cars.compare{
   background-color: white;
 .container_compare{
-  position: absolute;
-  width: 50%;
+  flex-grow:1;
+  width: 100%;
   z-index: 15;
   top: 30%;
   left: 35%;
-  margin: -100px 0 40px -150px;
+  margin: 0 auto;
 
   .compare-items{
   display: flex;
@@ -34,3 +34,4 @@ body.cars.compare{
   height: 100px;
 }
 }
+

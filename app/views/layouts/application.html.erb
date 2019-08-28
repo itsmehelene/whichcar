@@ -14,12 +14,13 @@
   </head>
 
   <body class="<%= controller_name %> <%= action_name %>">
-      <%= render 'shared/navbar' %>
-      <%= yield %>
-      <%= javascript_include_tag 'application' %>
-      <%= javascript_pack_tag 'application' %>
-    <script src="https://unpkg.com/aos@next/dist/aos.js">
-    </script>
+    <%= render 'shared/navbar' %>
+    <%= yield %>
+    <%= render 'shared/footer' %>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
+    <script src="path/to/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
     AOS.init({
     });

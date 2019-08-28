@@ -1,5 +1,4 @@
 <form action="/cars/compare">
-    <input type="submit" value="Compare" class="btn btn-primary">
   <div class="container_cards">
     <div class="all_cards">
       <% @cars.each do |car|%>
@@ -49,6 +48,9 @@
           </div>
         </div>
       <%end%>
+    </div>
+    <div class="sidebar">
+      <input type="submit" value="Compare" id="compare_button" class="btn btn-primary">
     </div>
   </div>
 </form>
