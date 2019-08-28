@@ -1,16 +1,19 @@
 .container_cards {
   display: flex;
   justify-content: center;
-  margin: 0 40px;
+  margin: 0 auto;
+  width:60%;
 }
 .sidebar {
   width: 5px;
   height: 5px;
   margin:0;
   right:0;
+  align-items:left;
 }
 
 .all_cards {
+  flex-grow:1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
