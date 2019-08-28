@@ -1,0 +1,13 @@
+#compare_button {
+  /* Element will be 'fixed' when it ... */
+  position: -webkit-sticky;
+  position: sticky;
+  /* ... is 10px from the top of the viewport */
+  top: 0;
+  right: 0;
+  -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
