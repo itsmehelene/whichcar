@@ -2,7 +2,7 @@
   <div class="container_cards">
     <div class="all_cards">
       <% @cars.each do |car|%>
-        <!-- <div data-aos="flip-right"> -->
+        <div data-aos="flip-right">
           <div class="card_car">
 
             <div class="photo">
@@ -10,6 +10,7 @@
             </div>
 
           <div class="cards_infos">
+
             <h5><%=car.model%></h5>
 
               <!-- <p>Passengers: <%=car.passengers%></p> -->
@@ -17,30 +18,90 @@
               <!-- <p>Year: <%=car.year%></p> -->
               <!-- <br> -->
               <p>Fuel: <%=car.fuel%></p>
-              <!-- <p>Crit'air: <%=car.critair%></p> -->
-            <!--   <br> -->
-              <!-- <p>Gearbox: <%=car.gearbox%></p> -->
-            <!--   <br> -->
-              <!-- <p>Trunk size: <%=car.trunk_size%> L</p> -->
-              <h4><%=car.price%> €</h3>
+             <h4><%=car.price%> €</h4>
+
           </div>
+
           <div class='options'>
-           <label class="check_container">
+
+          <label class="check_container">
              <input type="checkbox" value="<%= car.id %>" name="compare[]" >
              <span class="checkmark"></span>
-           </label>
+          </label>
 
-            <button type="button" class="btn-blue"><%= link_to "See More >" %></button>
+            <button type="button" id= "<%= car.id %>" class="btn-blue"><%= link_to "See More >" %>
+            </button>
+
+
+
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal<%= car.id %>"><option value="zoomInUp">zoomInUp</option>
+  Launch demo modal
+</button>
+
+
+
+
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal<%= car.id %>">
+  Launch demo modal
+</button>
+
+
 
           </div>
-        <!-- </div> -->
-         </div>
+          </div>
+        </div>
       <%end%>
     </div>
     <div class="sidebar">
       <input type="submit" value="Compare" id="compare_button" class="btn btn-primary">
     </div>
   </div>
-
-
 </form>
+
+
+
+<% @cars.each do |car|%>
+
+<div class="modal fade" id="myModal<%= car.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-xl animated zoomInUp" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <div class="container_big_card">
+            <div data-aos="flip-left zoom-in-up">
+              <div class="card_description">
+                <div class="photo">
+                  <%= image_tag car.photo %>
+                </div>
+                <div class="card_infos">
+                  <h2><%=car.brand%> - <%=car.model%></h5>
+                   <p>Type:       <%=car.car_type%></p>
+                   <p>Passengers: <%=car.passengers%></p>
+                   <p>Year:       <%=car.year%></p>
+                   <p>Fuel:       <%=car.fuel%></p>
+                   <p>Crit'air:   <%=car.critair%></p>
+                   <p>Gearbox:    <%=car.gearbox%></p>
+                   <p>Trunk size: <%=car.trunk_size%> L</p>
+                   <h3>Price:     <%=car.price%> €</h3>
+                </div>
+
+                  <%=link_to "add to fave",car_favourites_path(car),method: :post%>
+              </div>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+
