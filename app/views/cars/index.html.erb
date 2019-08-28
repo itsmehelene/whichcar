@@ -12,11 +12,6 @@
           <div class="cards_infos">
 
             <h5><%=car.model%></h5>
-
-              <!-- <p>Passengers: <%=car.passengers%></p> -->
-             <!--  <br> -->
-              <!-- <p>Year: <%=car.year%></p> -->
-              <!-- <br> -->
               <p>Fuel: <%=car.fuel%></p>
              <h4><%=car.price%> €</h4>
 
@@ -29,25 +24,18 @@
              <span class="checkmark"></span>
           </label>
 
-            <button type="button" id= "<%= car.id %>" class="btn-blue"><%= link_to "See More >" %>
-            </button>
+          <button type="button" id= "<%= car.id %>" class="btn btn-primary" data-toggle="modal" data-target="#myModal<%= car.id %>"> See More >
+          </button>
 
 
 
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal<%= car.id %>"><option value="zoomInUp">zoomInUp</option>
+
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal<%= car.id %>">
   Launch demo modal
 </button>
 
-
-
-
-
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal<%= car.id %>">
-  Launch demo modal
-</button>
-
-
+ -->
 
           </div>
           </div>
@@ -78,7 +66,6 @@
                   <%= image_tag car.photo %>
                 </div>
                 <div class="card_infos">
-                  <h2><%=car.brand%> - <%=car.model%></h5>
                    <p>Type:       <%=car.car_type%></p>
                    <p>Passengers: <%=car.passengers%></p>
                    <p>Year:       <%=car.year%></p>
