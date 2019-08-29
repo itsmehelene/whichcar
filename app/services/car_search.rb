@@ -1,7 +1,21 @@
 class CarSearch
-  def initialize(params)
+  def initialize(params, user)
     @params = params
-    @cars = Car.all
+
+    if user
+      @cars = Car.select("cars.*, favourites.id IS NOT NULL as favourite").joins("LEFT JOIN favourites ON favourites.car_id = cars.id AND favourites.user_id = #{user.id}")
+    else
+      @cars = Car.select("cars.*, false as favourite")
+    end
+
+# SELECT *, favourites.id IS NOT NULL as favourite
+# FROM cars
+# LEFT JOIN favourites ON favourites.car_id = cars.id AND favourites.user_id = 2
+
+
+
+
+
     puts params
   end
 

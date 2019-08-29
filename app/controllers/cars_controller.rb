@@ -2,7 +2,7 @@ class CarsController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    @cars = CarSearch.new(params[:search]).search
+    @cars = CarSearch.new(params[:search], current_user).search
   end
 
   def show
