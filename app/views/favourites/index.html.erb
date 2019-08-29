@@ -1,4 +1,7 @@
+
 <%@favourites.each do|f|%>
-<%=f.user.name%><br>
-<%=f.car.brand%><br>
+  <%= image_tag f.car.photo %>
+  <%=f.car.model%><br>
+  <%=f.car.price%><br>
+  <%=f.car.price%><br>
 <%end%>
