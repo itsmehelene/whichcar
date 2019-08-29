@@ -13,6 +13,7 @@
               <h5><%=car.model%></h5>
                 <p>Fuel: <%=car.fuel%></p>
                <h4><%=car.price%> €</h4>
+               <%= car.favourites.any? { |f| f.user == current_user } %>
             </div>
 
             <div class='options'>
@@ -37,7 +38,7 @@
 
 
 <% @cars.each do |car|%>
-  <div class="modal fade" id="myModal<%= car.id %>" tabindex="-1" role="dialog"   aria-labelledby="myModalLabel">
+  <div class="modal fade" id="myModal<%= car.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog modal-xl animated zoomInUp" role="document">
       <div class="modal-content">
         <div class="modal-body">
@@ -59,8 +60,11 @@
                    <p>Trunk size: <%=car.trunk_size%> L</p>
                    <h3>Price:     <%=car.price%> €</h3>
                 </div>
-                  <%=link_to "add to fave",car_favourites_path(car),method: :post%>
-                  <%= link_to ('star.jpg', border: 0), {action: 'index', controller: 'favourites'}, {class: 'dock-item'} %>
+
+                  <%= link_to car_favourites_path(car), remote: true, method: :post do %>
+                   <i id="star<%=car.id%>" class="fas fa-star class" ></i>
+                  <% end %>
+
               </div>
             </div>
           </div>
