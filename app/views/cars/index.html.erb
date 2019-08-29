@@ -13,7 +13,6 @@
               <h5><%=car.model%></h5>
                 <p>Fuel: <%=car.fuel%></p>
                <h4><%=car.price%> €</h4>
-               <%= car.favourites.any? { |f| f.user == current_user } %>
             </div>
 
             <div class='options'>
@@ -61,7 +60,7 @@
                    <h3>Price:     <%=car.price%> €</h3>
                 </div>
                   <%= link_to car_favourites_path(car), remote: true, method: :post do %>
-                   <i id="star<%=car.id%>" class="fas fa-star class" ></i>
+                   <i id="star<%=car.id%>" class="fas fa-star class <%= "class2" if car.favourite %>" ></i>
                   <% end %>
               </div>
             </div>
