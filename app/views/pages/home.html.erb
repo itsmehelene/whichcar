@@ -48,15 +48,14 @@
        </div>
 
 
-       <div class="surveystepi" id="6">
-        <div class="input">
-        <span class="multi-range">
-          <input name="search[min_price]" type="range" min="0" max="50" value="5" id="lower">
-          <input name="search[max_price]" type="range" min="0" max="50" value="45" id="upper">
-        </span><br>
-        <%= f.submit "Find cars", class: "btn btn-primary" %>
+        <div class="surveystepi" id="6">
+          <div class="input" id="6">
+          <input type="text" class="js-range-slider" name="my_range" value="" id="demo" />
+          <input type="hidden" id="min">
+          <input type="hidden" id="max">
+          <%= f.submit "Find cars", class: "btn btn-primary" %>
+         </div>
         </div>
-      </div>
       <% end %>
     </div>
   </div>
