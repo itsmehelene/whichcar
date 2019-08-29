@@ -1,7 +1,5 @@
 <form action="/cars/compare">
   <div class="container_cards">
-    <%=Scraper.new.print_first_title %>
-    <%=Scraper.new.link %>
     <div class="all_cards">
       <% @cars.each do |car|%>
         <div data-aos="flip-right">
@@ -37,17 +35,17 @@
 
 
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal<%= car.id %>"><option value="zoomInUp">zoomInUp</option>
-  Launch demo modal
-</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal<%= car.id %>"><option value="zoomInUp">zoomInUp</option>
+      Launch demo modal
+    </button>
 
 
 
 
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal<%= car.id %>">
-  Launch demo modal
-</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal<%= car.id %>">
+      Launch demo modal
+    </button>
 
 
 
@@ -60,6 +58,15 @@
       <input type="submit" value="Compare" id="compare_button" class="btn btn-primary">
     </div>
   </div>
+   <%=Scraper.new.print_first_title %><hr>
+    <%=Scraper.new.link %><hr>
+    <%=Scraper.new.price %><hr>
+    <%=Scraper.new.fuel %><hr>
+    <%=Scraper.new.gearbox %><hr>
+    <%=Scraper.new.truck %><hr>
+    <%=Scraper.new.photo %><hr>
+    <%=Scraper.new.critair %><hr>
+    <%=Scraper.new.year %><hr>
 </form>
 
 
