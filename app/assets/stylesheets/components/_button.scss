@@ -1,11 +1,15 @@
 .btn-primary {
-background-color: steelblue;
+background-color: #0BD4A2;
+color: black;
 opacity: 0.85;
 transition: all 0.5s;
 margin-top: 30px;
+border: solid transparent;
 
   &:hover {
-  background-color: steelblue;
+  background-color: #0BD4A2;
+  color: black;
   opacity: 1;
+  border: solid transparent;
   }
 }
