@@ -18,7 +18,7 @@ import 'ion-rangeslider'
         min: 0,
         max: 100000,
         from: 1000,
-        to: 5000,
+        to: 50000,
         step: 1000,
         skin: "round"
         });
