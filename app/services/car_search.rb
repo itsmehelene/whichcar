@@ -8,19 +8,14 @@ class CarSearch
       @cars = Car.select("cars.*, false as favourite")
     end
 
-# SELECT *, favourites.id IS NOT NULL as favourite
-# FROM cars
-# LEFT JOIN favourites ON favourites.car_id = cars.id AND favourites.user_id = 2
-
-
-
-
-
-    puts params
+    # SELECT *, favourites.id IS NOT NULL as favourite
+    # FROM cars
+    # LEFT JOIN favourites ON favourites.car_id = cars.id AND favourites.user_id = 2
+    # puts params
   end
 
   def search
-    #raise
+    # raise
     filter_by_prices       if @params.key? :prices
     filter_by_passengers   if @params.key? :passengers
     filter_by_items        if @params.key? :items
@@ -65,9 +60,9 @@ class CarSearch
 
   def filter_by_gearbox
     if @params[:gearbox] == "Auto"
-      @cars = @cars.where(gearbox: "Automatic")
+      @cars = @cars.where(gearbox: ["Automatic", "automatique"])
     else
-      @cars = @cars.where(gearbox: "Manual")
+      @cars = @cars.where(gearbox: ["Manual", "manuelle"])
     end
   end
 
