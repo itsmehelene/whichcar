@@ -2,35 +2,43 @@ require 'nokogiri'
 require 'open-uri'
 
 class Scraper
-
+  # if you dont have initialize the class will not work
   def initialize
-    @doc = Nokogiri::HTML(open("https://www.aramisauto.com/achat/recherche?page=0&scroll=9316&p=4&klxw=1").read)
-  end
-
-
-  def print_first_title
-    @doc.search('.vehicle-model').map do |element|
-      element.text
+    @docs = []
+    i = 1
+    while i < 3
+      @docs << Nokogiri::HTML(open("https://www.aramisauto.com/achat/recherche?page=#{i}").read)
+      i += 1
     end
   end
 
+  def model
+    model = []
+    @docs.each do |doc|
+      doc.search('.vehicle-model').map do |element|
+        model << element.text
+      end
+    end
+    model
+  end
 
   def link
-    @array = []
-    @array2 = []
-    @doc.search('.vehicle-general-info a').map do |element|
-      @array << element.attribute('href').value
+    @link = []
+    @docs.each do |doc|
+      doc.search('.vehicle-general-info a').map do |element|
+        @link << element.attribute('href').value
+      end
     end
-    return @array
+    return @link
   end
 
   def price
-    @array2 = []
+    @price = []
     link.each do |link|
       @doc = Nokogiri::HTML(open("https://www.aramisauto.com#{link}").read)
-      @array2 << @doc.search('#price-total').attribute('data-price').value.to_i
+      @price << @doc.search('#price-total').attribute('data-price').value.to_i
     end
-    return @array2
+    return @price
   end
 
   def fuel
@@ -57,20 +65,35 @@ class Scraper
 
   def truck
     @truck_scrap = []
+    matched = []
     link.each do |link|
       @doc = Nokogiri::HTML(open("https://www.aramisauto.com#{link}").read)
-      @truck_scrap << @doc.search('.technical-features__value').first.text
+       matched = @doc.search('.technical-features__value').first.text.match(/[1-9][0-9][0-9]/)
+       @truck_scrap << matched[0].to_i
     end
     return @truck_scrap
+  end
+
+  def passenger
+    @passenger_scrap = []
+    matched = []
+    link.each do |link|
+      @doc = Nokogiri::HTML(open("https://www.aramisauto.com#{link}").read)
+      matched = @doc.search('.technical-features__value').text.match(/\d/)
+      @passenger_scrap << matched[0].to_i
+    end
+    return @passenger_scrap
   end
 
   def critair
     @critair_scrap = []
     matched = []
+    number = []
     link.each do |link|
       @doc = Nokogiri::HTML(open("https://www.aramisauto.com#{link}").read)
-      matched = @doc.search('.labeled-pictogram span').text.match(/Certificat Crit'Air \d/)
-      @critair_scrap << matched[0]
+      matched = @doc.search('.labeled-pictogram span').text.match(/Crit'Air \d/)
+      number = matched[0].match(/\d/)
+      @critair_scrap << number[0].to_i
     end
     return @critair_scrap
   end
@@ -80,8 +103,8 @@ class Scraper
     matched = []
     link.each do |link|
       @doc = Nokogiri::HTML(open("https://www.aramisauto.com#{link}").read)
-      matched = @doc.search('.labeled-pictogram span').text.match(/[0-9][0-9]\/([0-9][0-9])\/([0-9][0-9](0|1)[0-9])/)
-      @year_scrap << matched[0]
+      matched = @doc.search('.labeled-pictogram span').text.match(/([0-9][0-9](0|1)[0-9])/)
+      @year_scrap << matched[0].to_i
     end
     return @year_scrap
   end
