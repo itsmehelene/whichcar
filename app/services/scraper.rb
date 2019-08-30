@@ -117,7 +117,5 @@ class Scraper
     end
     return @photo_scrap
   end
-
-
 end
 

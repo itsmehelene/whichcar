@@ -15,7 +15,8 @@ Car.create!(
   gearbox:car.gearbox[i],
   trunk_size: car.truck[i],
   photo: car.photo[i],
-  price: car.price[i])
+  price: car.price[i],
+  link: "https://www.aramisauto.com#{car.link[i]}")
   puts "#{i}th one created"
   i+=1
 end
