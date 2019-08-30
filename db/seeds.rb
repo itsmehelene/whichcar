@@ -6,6 +6,7 @@ puts "Scraper created"
 i = 0
 while i < car.model.size
 Car.create!(
+
   model: car.model[i],
   passengers: car.passenger[i],
   year:car.year[i],
@@ -295,4 +296,3 @@ end
 #   photo: "gmc.jpg",
 #   price: 80900)
 
-# end

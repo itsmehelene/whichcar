@@ -4,6 +4,7 @@
   margin: 0 auto;
   width:60%;
 }
+
 .sidebar {
   width: 5px;
   height: 5px;
@@ -61,5 +62,10 @@
       }
     }
   }
+}
+
+.modal-body {
+background-color: transparent;
+
 }
 

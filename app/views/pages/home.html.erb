@@ -10,53 +10,51 @@
       <div class="form-post">
         <h2>Build you dream car</h2>
 
-        <%= simple_form_for :search, url: cars_path, method: :get, remote: true do |f| %>
+        <%= simple_form_for :search, url: cars_path, method: :get do |f| %>
 
         <div class="surveystepp" id="1">
           <div class="input">
-          <%= f.input :passenger, collection: ["2", "5", "+5"], as: :check_boxes, label: 'How many passengers ?' %>
+          <%= f.input :passengers, collection: ["2", "5", "More than 5"], as: :radio_buttons, label: 'How many passengers ?', include_hidden: false %>
           <a href="#2" class="btn btn-primary">Next</a>
           </div>
         </div>
 
         <div class="surveystepi" id="2">
           <div class="input">
-          <%= f.input :gearbox, collection: ["Auto", "Manual"], as: :check_boxes, label: 'What gearbox do you want ?' %>
+          <%= f.input :gearbox, collection: ["Auto", "Manual"], as: :radio_buttons, label: 'What gearbox do you want ?', include_hidden: false  %>
            <a href="#3" class="btn btn-primary">Next</a>
            </div>
         </div>
 
         <div class="surveystepp" id="3">
           <div class="input">
-          <%= f.input :ecology, collection: ["Yes", "No"], as: :check_boxes, label: 'Do you want your car eco friendly ?' %>
+          <%= f.input :ecology, collection: ["Yes", "No"], as: :radio_buttons, label: 'Do you want your car eco friendly ?', include_hidden: false  %>
            <a href="#4" class="btn btn-primary">Next</a>
            </div>
         </div>
 
         <div class="surveystepi" id="4">
           <div class="input">
-          <%= f.input :items, collection: ["🧳", " 🧳 🧳", " 🧳 🧳 🧳"], as: :check_boxes, label: 'Will you carry a lot of items?' %>
+          <%= f.input :items, collection: ["Not a lot", " A little bit", "A lot"], as: :radio_buttons, label: 'Will you carry a lot of items?', include_hidden: false  %>
           <a href="#5" class="btn btn-primary">Next</a>
           </div>
         </div>
 
         <div class="surveystepp" id="5">
           <div class="input">
-         <%= f.input :road, collection: ["In the city", "On the highway"], as: :check_boxes, label: 'Where do you often drive ?' %>
+         <%= f.input :road, collection: ["In the city", "On the highway"], as: :radio_buttons, label: 'Where do you often drive ?', include_hidden: false  %>
           <a href="#6" class="btn btn-primary">Next</a>
           </div>
        </div>
 
 
-       <div class="surveystepi" id="6">
-        <div class="input">
-        <span class="multi-range">
-          <input name="search[min_price]" type="range" min="0" max="50" value="5" id="lower">
-          <input name="search[max_price]" type="range" min="0" max="50" value="45" id="upper">
-        </span><br>
-        <%= f.submit "Find cars", class: "btn btn-primary" %>
+        <div class="surveystepi" id="6">
+          <div class="input" id="6">
+
+            <%= f.input :prices, label: false, input_html: {class: "js-range-slider"}, wrapper: false %>
+            <%= f.submit "Find cars", class: "btn btn-primary" %>
+         </div>
         </div>
-      </div>
       <% end %>
     </div>
   </div>
