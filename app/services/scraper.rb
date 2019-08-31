@@ -6,7 +6,7 @@ class Scraper
   def initialize
     @docs = []
     i = 1
-    while i < 3
+    while i < 55
       @docs << Nokogiri::HTML(open("https://www.aramisauto.com/achat/recherche?page=#{i}").read)
       i += 1
     end
