@@ -6,7 +6,7 @@ class Scraper
   def initialize
     @docs = []
     i = 1
-    while i < 3
+    while i < 55
       @docs << Nokogiri::HTML(open("https://www.aramisauto.com/achat/recherche?page=#{i}").read)
       i += 1
     end
@@ -16,7 +16,7 @@ class Scraper
     model = []
     @docs.each do |doc|
       doc.search('.vehicle-model').map do |element|
-        model << element.text
+        model << element.text.gsub!('Robert', 'Joe')
       end
     end
     model
@@ -30,6 +30,18 @@ class Scraper
       end
     end
     return @link
+  end
+
+  def type
+    @type_scrap = []
+    matched = []
+    link.each do |link|
+      @doc = Nokogiri::HTML(open("https://www.aramisauto.com#{link}").read)
+      matched = @doc.search('.labeled-pictogram__label').text.match(/Voiture d'occasion|Voiture 0km/)
+      @type_scrap << matched[0].gsub!('Voiture d\'occasion', 'Second hand') if matched[0] == "Voiture d'occasion"
+      @type_scrap << matched[0].gsub!('0 km') if matched[0] == "Voiture 0km"
+    end
+    return @type_scrap
   end
 
   def price
