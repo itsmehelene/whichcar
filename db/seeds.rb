@@ -20,6 +20,7 @@ Car.create!(
   puts "#{i}th one created"
   i+=1
 end
+
 # 2.times do
 # Car.create!(
 #   model:"308",
