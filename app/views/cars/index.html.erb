@@ -58,6 +58,8 @@
                    <p>Gearbox:    <%=car.gearbox%></p>
                    <p>Trunk size: <%=car.trunk_size%> L</p>
                    <h3>Price:     <%=car.price%> €</h3>
+                   <p><%=link_to "Get more information",car.link%> </p>
+
                 </div>
                   <%= link_to car_favourites_path(car), remote: true, method: :post do %>
                    <i id="star<%=car.id%>" class="fas fa-star class <%= "class2" if car.favourite %>" ></i>
