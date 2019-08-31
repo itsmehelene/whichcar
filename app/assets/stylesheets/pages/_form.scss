@@ -79,12 +79,12 @@ abbr {
 
 
 .surveystep {
-  height: 80vh;
+  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: 48px;
-  margin-top: 30vh;
+  margin-top: 40vh;
   margin-bottom: 10vh;
   border-radius: 5px;
 
@@ -114,5 +114,7 @@ abbr {
 .irs--round.irs-with-grid {
     height: 65px;
     width: 100%;
+    margin-top: 70px;
+    margin-bottom: 40px;
 }
 
