@@ -2,7 +2,7 @@
   <div class="container_cards">
     <div class="all_cards">
       <% @cars.each do |car|%>
-        <div data-aos="flip-right" data-aos-duration="800">
+        <div data-aos="flip-right" data-aos-duration="700">
           <div class="card_car">
             <div class="photo">
               <%= image_tag "#{car.photo}" %>
@@ -11,7 +11,7 @@
             <div class="cards_infos">
               <h5><%=car.model%></h5>
               <p><%=car.car_type%></p>
-               <h4><%=car.price%> €</h4>
+              <h4><%=car.price%> €</h4>
             </div>
 
             <div class='options'>
