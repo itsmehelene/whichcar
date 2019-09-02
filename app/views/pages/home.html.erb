@@ -1,7 +1,15 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('assets/banner-bkg.jpg');">
-  <div class="container">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('assets/banner-bkg.jpg');height:100vh;margin:0;">
+
+  <div class="containerx">
     <h1>WhichCar?</h1>
-     <h2>Find your dream car</h2>
+    <h2>Find your dream car</h2>
+  </div>
+  <div class="sign">
+    <%=link_to "Sign up today",new_user_registration_path,class: "sign_button"%>
+  </div>
+  <div class="scrolling">
+    <p>Scroll Down</p>
+     <a href="#1"><i class="fas fa-chevron-down"></i></a>
   </div>
 </div>
 

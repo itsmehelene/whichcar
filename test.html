@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+  <style>
+    .child {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      scroll-snap-type: y mandatory;
+      max-height: 100vh;
+        overflow-y: scroll;
+    }
+
+    .child {
+      scroll-snap-align: center;
+    }
+
+  </style>
+
+</head>
+<body>
+  <div class="container">
+    <div style="background: blue" class="child"><h1>1</h1></div>
+    <div style="background: red" class="child"><h1>2</h1></div>
+    <div style="background: yellow" class="child"><h1>3</h1></div>
+    <div style="background: green" class="child"><h1>4</h1></div>
+  </div>
+</body>
+</html>
