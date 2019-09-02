@@ -1,1 +1,21 @@
-// Specific CSS for your home-page
+body.pages.home {
+  input {
+    display: none;
+  }
+
+  label {
+    border: 1px solid steelblue;
+    color: steelblue;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  input:checked + label {
+    background: steelblue;
+    color: white;
+  }
+}
+

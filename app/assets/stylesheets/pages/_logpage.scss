@@ -1,0 +1,38 @@
+.container-form {
+  background-color: white;
+  width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 50px;
+  margin-left: 200px;
+
+}
+
+.form {
+
+  text-align: center;
+  width: 400px;
+
+
+  h2 {
+    margin: 30px;
+  }
+}
+
+  .form-control {
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+.image-form {
+  flex: 1 1 0;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
