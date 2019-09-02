@@ -1,13 +1,14 @@
-body.sessions.new {
-  background-color: steelblue;
+body.registrations.new {
+ background-color: steelblue;
 
-.biggercontainer {
+  .bigcontainer {
     display: flex;
     justify-content: center;
 
-}
+  }
 
-.container-form {
+  .othercontainer {
+
   background-color: white;
   width: 800px;
   display: flex;
@@ -16,8 +17,7 @@ body.sessions.new {
   margin-top: 50px;
   height: 600px;
   border-radius: 5px;
-
-}
+  }
 
 .form {
   text-align: center;
@@ -29,12 +29,6 @@ body.sessions.new {
   }
 }
 
-  .form-control {
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-  }
-
 .image-form {
   flex: 1 1 0;
 
@@ -44,11 +38,9 @@ body.sessions.new {
   }
 }
 
-
-.form-check {
-  position: initial;
-  margin-left: 40px;
-
-}
-
+  .form-control {
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
 }
