@@ -1,0 +1,2 @@
+var linkTag = '<%= j render "cars/favourite_star", car: @car, is_favourite: false, favourite_id: nil %>'
+document.querySelector("#fav<%= @car.id %>").innerHTML = linkTag

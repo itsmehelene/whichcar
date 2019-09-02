@@ -3,9 +3,10 @@ class CarSearch
     @params = params
 
     if user
-      @cars = Car.select("cars.*, favourites.id IS NOT NULL as favourite").joins("LEFT JOIN favourites ON favourites.car_id = cars.id AND favourites.user_id = #{user.id}")
+      @cars = Car.select("cars.*, favourites.id IS NOT NULL as favourite, favourites.id as favourite_id").joins("LEFT JOIN favourites ON favourites.car_id = cars.id AND favourites.user_id = #{user.id}")
+    # pour trouver  id de favourtite s
     else
-      @cars = Car.select("cars.*, false as favourite")
+      @cars = Car.select("cars.*, false as favourite, NULL as favourite_id")
     end
 
     # SELECT *, favourites.id IS NOT NULL as favourite

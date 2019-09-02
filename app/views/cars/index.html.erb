@@ -2,7 +2,7 @@
   <div class="container_cards">
     <div class="all_cards">
       <% @cars.each do |car|%>
-        <div data-aos="flip-right">
+        <div data-aos="flip-right" data-aos-duration="800">
           <div class="card_car">
 
             <div class="photo">
@@ -41,7 +41,9 @@
     <div class="modal-dialog modal-xl animated zoomInUp" role="document">
       <div class="modal-content">
         <div class="modal-body">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
           <div class="container_big_card">
               <div class="card_description">
                 <div class="photo">
@@ -59,9 +61,10 @@
                    <p>Trunk size: <%=car.trunk_size%> L</p>
                    <h3>Price:     <%=car.price%> €</h3>
                 </div>
-                  <%= link_to car_favourites_path(car), remote: true, method: :post do %>
-                   <i id="star<%=car.id%>" class="fas fa-star class <%= "class2" if car.favourite %>" ></i>
-                  <% end %>
+
+                <div id="fav<%= car.id%>" class="fav">
+                   <%= render 'favourite_star', car: car, is_favourite: car.favourite, favourite_id: car.favourite_id %>
+                </div>
               </div>
             </div>
           </div>
