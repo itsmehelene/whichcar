@@ -2,13 +2,12 @@
 //= require sweet-alert2-rails
 import "bootstrap";
 // import "../components/slider";
-// import "../components/compare";
+import "../components/compare";
 // import "../components/move_card";
-
+import 'balloon-css/balloon.css';
 import 'animate.css/animate.min.css'
-
+import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'ion-rangeslider'
-
 
 
 
