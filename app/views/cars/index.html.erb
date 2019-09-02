@@ -4,7 +4,6 @@
       <% @cars.each do |car|%>
         <div data-aos="flip-right" data-aos-duration="800">
           <div class="card_car">
-
             <div class="photo">
               <%= image_tag "#{car.photo}" %>
             </div>
@@ -61,7 +60,7 @@
                    <p>Gearbox :    <%=car.gearbox%></p>
                    <p>Trunk size : <%=car.trunk_size%> L</p>
                    <h3>Price :     <%=car.price%> €</h3>
-
+                   <%=link_to "Get more info",car.link%>
                 </div>
 
                 <div id="fav<%= car.id%>" class="fav">
