@@ -38,6 +38,7 @@ html {
 }
 
 // design des input form
+body.pages.home{}
 .form-group {
   display: flex;
   margin-top: 5px;
@@ -74,6 +75,9 @@ abbr {
   margin-bottom: 10vh;
   border-radius: 5px;
   background-color: white;
+  .btn{
+    width:40%;
+  }
 }
 
 .survey-step-odd {

@@ -2,19 +2,23 @@
   <div class="cards">
     <button onclick="topFunction()" id="myBtn" title="Go to compare">Compare</button>
       <% @cars.each do |car|%>
-        <div data-aos="flip-right" data-aos-duration="700">
-
+      <div class="col_12 col-lg-6 col-xl-4">
+        <div data-aos="flip-right" data-aos-duration="800">
           <div class="card_car">
             <div class="photo">
               <%= image_tag "#{car.photo}" %>
             </div>
 
             <div class="cards_infos">
-
-              <h5><%=car.model%></h5>
-              <p><%=car.car_type%></p>
-              <h4><%=car.price%> €</h4>
-
+              <h6><strong><%=car.model.upcase%></strong></h6>
+              <% if car.car_type == "0km"%>
+              <p>New</p>
+              <%else%>
+              <%=car.car_type%>
+              <%end%>
+               <h6><%=car.price%> €</h6>
+              <button type="button" id= "<%= car.id %>" data-toggle="modal" data-target="#myModal<%= car.id %>"> See More >
+              </button>
             </div>
             <div class='options'>
               <label class="check_container" aria-label="Compare!" data-balloon-pos="up">
