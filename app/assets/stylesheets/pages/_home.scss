@@ -17,5 +17,21 @@ body.pages.home {
     background: steelblue;
     color: white;
   }
-}
 
+
+
+
+  .form-post {
+    scroll-snap-type: y mandatory;
+    max-height: 100vh;
+    overflow-y: scroll;
+  }
+
+  .surveystep {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: center;
+  }
+}
