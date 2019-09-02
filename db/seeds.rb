@@ -6,7 +6,6 @@ puts "Scraper created"
 i = 0
 while i < car.model.size
 Car.create!(
-
   model: car.model[i],
   passengers: car.passenger[i],
   year:car.year[i],
@@ -16,7 +15,7 @@ Car.create!(
   trunk_size: car.truck[i],
   photo: car.photo[i],
   price: car.price[i],
-  type: car.type[i],
+  car_type: car.car_type[i],
   link: "https://www.aramisauto.com#{car.link[i]}")
   puts "#{i}th one created"
   i+=1
