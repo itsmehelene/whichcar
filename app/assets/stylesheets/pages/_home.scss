@@ -1,7 +1,9 @@
 body.pages.home {
    margin: 0;
    padding:0;
-
+::-webkit-scrollbar {
+    display: none;
+}
   input[type="radio"] {
     display: none;
   }
