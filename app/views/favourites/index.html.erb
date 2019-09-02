@@ -1,8 +1,27 @@
-<div class="container mt-5">
-<h2>Your Favourites</h2>
-<%@favourites.each do|f|%>
-  <%= image_tag f.car.photo ,class: "photos mt-5"%>
-  <%=f.car.model%><br>
-  <%=f.car.price%><br>
-  <%=link_to "Get more information",f.car.link%>
-<%end%>
+<div class="container-fav">
+  <h2>Your Favourites</h2>
+    <div class="info_fav">
+      <%@favourites.each do|f|%>
+      <div class="car_infos">
+        <div class="car_description">
+          <%= image_tag f.car.photo ,class: "photos"%>
+          <div class="info_car">
+            <h3><%=f.car.model%></h3>
+            <div class="infos">
+              <div class="info">
+                <p>Passengers : <%=f.car.passengers%></p>
+                <p>Year :       <%=f.car.year%></p>
+                <p>Fuel :       <%=f.car.fuel%></p>
+                <p>Crit'air :   <%=f.car.critair%></p>
+                <p>Gearbox :    <%=f.car.gearbox%></p>
+                <p>Trunk size : <%=f.car.trunk_size%> L</p>
+                <h3>Price : <%=f.car.price%> €</h3>
+                  <%=link_to "Get more information",f.car.link%>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <%end%>
+  </div>
+</div>
