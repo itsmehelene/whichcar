@@ -1,0 +1,49 @@
+body {
+  background-color: white;
+}
+
+.container-fav {
+  margin: 40px 75px;
+}
+
+.info_fav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+}
+
+.car_description {
+  display:flex;
+  margin: 10px 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);;
+  height: 220px;
+}
+
+.info_car {
+  flex-grow:1;
+  padding-left: 30px;
+  align-self: center;
+}
+
+.infos {
+  display:flex;
+}
+
+.info {
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-around;
+  width: 100%;
+
+  & > *:nth-child(even) {
+    padding-left: 76px;
+  }
+
+  h3 {
+      align-self: center;
+  }
+
+  a {
+    margin-top: 9px;
+  }
+}
