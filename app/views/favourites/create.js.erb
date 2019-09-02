@@ -1,9 +1,2 @@
-// const fav = document.querySelector('class')
-
-//   fav.addEventListener('click', (event) =>
-//     console.log(event)
-//     fav.classList.toggle('class')
-//     )
-
-
-document.querySelector("#star<%= @car.id %>").classList.add("class2");
+var linkTag = '<%= j render "cars/favourite_star", car: @car, is_favourite: true, favourite_id: @favourite.id %>'
+document.querySelector("#fav<%= @car.id %>").innerHTML = linkTag

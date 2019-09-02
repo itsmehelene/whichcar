@@ -6,10 +6,11 @@ Rails.application.routes.draw do
       get 'compare'
     end
   end
+
   resources :cars,only: [:index,:show] do
     resources :favourites, only: [:create]
   end
-  resources :favourites,only: [:destroy,:index]
-  devise_for :users
 
+  resources :favourites,only: [:index, :destroy]
+  devise_for :user
 end
