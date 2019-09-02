@@ -1,5 +1,8 @@
+<div class="container mt-5">
+<h2>Your Favourites</h2>
 <%@favourites.each do|f|%>
-  <%= image_tag f.car.photo %>
+  <%= image_tag f.car.photo ,class: "photos mt-5"%>
   <%=f.car.model%><br>
   <%=f.car.price%><br>
+  <%=link_to "Get more information",car.link%>
 <%end%>

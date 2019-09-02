@@ -1,59 +1,80 @@
-<!-- <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('assets/banner-bkg.jpg');">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('assets/banner-bkg.jpg');">
   <div class="container">
     <h1>WhichCar?</h1>
+     <h2>Find your dream car</h2>
   </div>
-</div> -->
+</div>
 
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-xs-12 col-sm-8 col-lg-12 col-xl-12">
       <div class="form-post">
-        <h2>Build you dream car</h2>
+
+
+
 
         <%= simple_form_for :search, url: cars_path, method: :get do |f| %>
 
-        <div class="surveystepp" id="1">
-          <div class="input">
-          <%= f.input :passengers, collection: ["2", "5", "More than 5"], as: :radio_buttons, label: 'How many passengers ?', include_hidden: false %>
-          <a href="#2" class="btn btn-primary">Next</a>
+        <div class="surveystep" id="1">
+          <div class="question">
+            <%= f.input :passengers, collection: ["2", "5", "More than 5"], as: :radio_buttons, label: 'How many passengers ?', include_hidden: false %>
+             <a href="#2" class="btn btn-primary">Next</a>
+          </div>
+          <div class="image">
+            <%= image_tag "passengers.png", alt: "alttext" %>
           </div>
         </div>
 
-        <div class="surveystepi" id="2">
-          <div class="input">
+        <div class="surveystep survey-step-odd" id="2">
+          <div class="question">
           <%= f.input :gearbox, collection: ["Auto", "Manual"], as: :radio_buttons, label: 'What gearbox do you want ?', include_hidden: false  %>
            <a href="#3" class="btn btn-primary">Next</a>
            </div>
-        </div>
-
-        <div class="surveystepp" id="3">
-          <div class="input">
-          <%= f.input :ecology, collection: ["Yes", "No"], as: :radio_buttons, label: 'Do you want your car eco friendly ?', include_hidden: false  %>
-           <a href="#4" class="btn btn-primary">Next</a>
-           </div>
-        </div>
-
-        <div class="surveystepi" id="4">
-          <div class="input">
-          <%= f.input :items, collection: ["Not a lot", " A little bit", "A lot"], as: :radio_buttons, label: 'Will you carry a lot of items?', include_hidden: false  %>
-          <a href="#5" class="btn btn-primary">Next</a>
+              <div class="image">
+            <%= image_tag "speed.png", alt: "alttext" %>
           </div>
         </div>
 
-        <div class="surveystepp" id="5">
-          <div class="input">
+        <div class="surveystep" id="3">
+          <div class="question">
+          <%= f.input :ecology, collection: ["Yes", "No"], as: :radio_buttons, label: 'Do you want your car to be eco-friendly ?', include_hidden: false  %>
+           <a href="#4" class="btn btn-primary">Next</a>
+           </div>
+              <div class="image">
+            <%= image_tag "nature.png", alt: "alttext" %>
+          </div>
+        </div>
+
+        <div class="surveystep" id="4">
+          <div class="question">
+          <%= f.input :items, collection: ["Not a lot", " A little bit", "A lot"], as: :radio_buttons, label: 'Will you carry a lot of items?', include_hidden: false  %>
+          <a href="#5" class="btn btn-primary">Next</a>
+          </div>
+             <div class="image">
+            <%= image_tag "bag.png", alt: "alttext" %>
+          </div>
+        </div>
+
+        <div class="surveystep" id="5">
+          <div class="question">
          <%= f.input :road, collection: ["In the city", "On the highway"], as: :radio_buttons, label: 'Where do you often drive ?', include_hidden: false  %>
           <a href="#6" class="btn btn-primary">Next</a>
+          </div>
+             <div class="image">
+            <%= image_tag "road.png", alt: "alttext" %>
           </div>
        </div>
 
 
-        <div class="surveystepi" id="6">
-          <div class="input" id="6">
+        <div class="surveystep" id="6">
+          <div class="question" id="6">
 
             <%= f.input :prices, label: false, input_html: {class: "js-range-slider"}, wrapper: false %>
             <%= f.submit "Find cars", class: "btn btn-primary" %>
          </div>
+                <div class="image">
+            <%= image_tag "dame.png", alt: "alttext" %>
+          </div>
         </div>
       <% end %>
     </div>

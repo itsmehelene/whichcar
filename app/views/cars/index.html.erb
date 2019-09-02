@@ -11,7 +11,7 @@
 
             <div class="cards_infos">
               <h5><%=car.model%></h5>
-                <p>Fuel: <%=car.fuel%></p>
+              <p><%=car.car_type%></p>
                <h4><%=car.price%> €</h4>
             </div>
 
@@ -33,6 +33,7 @@
       <input type="submit" value="Compare" id="compare_button" class="btn btn-primary">
     </div>
   </div>
+
 </form>
 
 
@@ -53,13 +54,14 @@
                 <div class="card_infos">
                   <h2><%=car.model%></h5>
 
-                   <p>Passengers: <%=car.passengers%></p>
-                   <p>Year:       <%=car.year%></p>
-                   <p>Fuel:       <%=car.fuel%></p>
-                   <p>Crit'air:   <%=car.critair%></p>
-                   <p>Gearbox:    <%=car.gearbox%></p>
-                   <p>Trunk size: <%=car.trunk_size%> L</p>
-                   <h3>Price:     <%=car.price%> €</h3>
+                   <p>Passengers : <%=car.passengers%></p>
+                   <p>Year :       <%=car.year%></p>
+                   <p>Fuel :       <%=car.fuel%></p>
+                   <p>Crit'air :   <%=car.critair%></p>
+                   <p>Gearbox :    <%=car.gearbox%></p>
+                   <p>Trunk size : <%=car.trunk_size%> L</p>
+                   <h3>Price :     <%=car.price%> €</h3>
+
                 </div>
 
                 <div id="fav<%= car.id%>" class="fav">
