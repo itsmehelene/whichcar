@@ -23,6 +23,9 @@
         <div class="form-post">
 
         <div class="surveystep" id="1">
+
+
+          <span><a href="#banner" class="previous round" id="first">&#8249;</a></span>
           <div class="question">
             <%= f.input :passengers, collection: ["2", "5", "More than 5"], as: :radio_buttons, label: 'How many passengers ?', include_hidden: false,id:'question' %>
           </div>
@@ -35,6 +38,7 @@
         <div class="surveystep" id="2">
           <span><a href="#1" class="previous round">&#8249;</a></span>
           <div class="survey-step-odd d-flex">
+
           <div class="question">
             <%= f.input :gearbox, collection: ["Auto", "Manual"], as: :radio_buttons, label: 'What gearbox do you want ?', include_hidden: false  %>
           </div>
@@ -94,3 +98,4 @@
   </div>
 </div>
 </div>
+
