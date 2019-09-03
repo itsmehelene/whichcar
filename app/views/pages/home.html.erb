@@ -17,96 +17,82 @@
 
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-xs-12 col-sm-8 col-lg-12 col-xl-12">
-      <div class="form-post">
-
+    <div class="col-12 col-sm-12 col-lg-12 col-xl-12">
+      <div class="wrapper">
         <%= simple_form_for :search, url: cars_path, method: :get do |f| %>
+        <div class="form-post">
 
         <div class="surveystep" id="1">
-          <div class="triangle triangle1"></div>
-          <div class="triangle triangle2"></div>
+
+          <span><a href="#banner" class="previous round" id="first">&#8249;</a></span>
 
           <div class="question">
-            <%= f.input :passengers, collection: ["2", "5", "More than 5"], as: :radio_buttons, label: 'How many passengers ?', include_hidden: false %>
-            <div class="d-flex justify-content-around">
-             <a href="#banner" class="btn btn-primary">Previous</a>
-             <a href="#2" class="btn btn-primary">Next</a>
-           </div>
+            <%= f.input :passengers, collection: ["2", "5", "More than 5"], as: :radio_buttons, label: 'How many passengers ?', include_hidden: false,id:'question' %>
           </div>
           <div class="image">
             <%= image_tag "passengers.png", alt: "alttext" %>
           </div>
+          <span><a href="#2" class="next round" id="second" onclick="smooth()">&#8250;</a></span>
         </div>
 
-        <div class="surveystep survey-step-odd" id="2">          
-          <div class="triangle triangle1"></div>
-          <div class="triangle triangle2"></div>
+        <div class="surveystep" id="2">
+          <span><a href="#1" class="previous round">&#8249;</a></span>
+          <div class="survey-step-odd d-flex">
 
           <div class="question">
-          <%= f.input :gearbox, collection: ["Auto", "Manual"], as: :radio_buttons, label: 'What gearbox do you want ?', include_hidden: false  %>
-          <div class="d-flex justify-content-around">
-            <a href="#1" class="btn btn-primary">Previous</a>
-           <a href="#3" class="btn btn-primary">Next</a>
-         </div>
-           </div>
+            <%= f.input :gearbox, collection: ["Auto", "Manual"], as: :radio_buttons, label: 'What gearbox do you want ?', include_hidden: false  %>
+          </div>
               <div class="image">
             <%= image_tag "speed.png", alt: "alttext" %>
           </div>
+          </div>
+           <span><a href="#3" class="next round">&#8250;</a></span>
         </div>
 
         <div class="surveystep" id="3">
+          <span><a href="#2" class="previous round">&#8249;</a></span>
           <div class="question">
-          <%= f.input :ecology, collection: ["Yes", "No"], as: :radio_buttons, label: 'Do you want your car to be eco-friendly ?', include_hidden: false  %>
-          <div class="d-flex justify-content-around">
-          <a href="#2" class="btn btn-primary">Previous</a>
-           <a href="#4" class="btn btn-primary">Next</a>
-         </div>
-           </div>
-              <div class="image">
+            <%= f.input :ecology, collection: ["Yes", "No"], as: :radio_buttons, label: 'Do you want your car to be eco-friendly ?', include_hidden: false  %>
+          </div>
+          <div class="image">
             <%= image_tag "nature.png", alt: "alttext" %>
           </div>
+          <span><a href="#4" class="next round">&#8250;</a></span>
         </div>
 
         <div class="surveystep" id="4">
+          <span><a href="#3" class="previous round">&#8249;</a></span>
           <div class="question">
-          <%= f.input :items, collection: ["Not a lot", " A little bit", "A lot"], as: :radio_buttons, label: 'Will you carry a lot of items?', include_hidden: false  %>
-          <div class="d-flex justify-content-around">
-          <a href="#4" class="btn btn-primary">Previous</a>
-          <a href="#5" class="btn btn-primary">Next</a>
-        </div>
+            <%= f.input :items, collection: ["Not a lot", " A little bit", "A lot"], as: :radio_buttons, label: 'Will you carry a lot of items?', include_hidden: false  %>
           </div>
-             <div class="image">
+          <div class="image">
             <%= image_tag "bag.png", alt: "alttext" %>
           </div>
+          <span><a href="#5" class="next round">&#8250;</a></span>
         </div>
 
         <div class="surveystep" id="5">
+          <span><a href="#4" class="previous round">&#8249;</a></span>
           <div class="question">
-         <%= f.input :road, collection: ["In the city", "On the highway"], as: :radio_buttons, label: 'Where do you often drive ?', include_hidden: false  %>
-         <div class="d-flex justify-content-around">
-         <a href="#4" class="btn btn-primary">Previous</a>
-          <a href="#6" class="btn btn-primary">Next</a>
-        </div>
+            <%= f.input :road, collection: ["In the city", "On the highway"], as: :radio_buttons, label: 'Where do you often drive ?', include_hidden: false  %>
           </div>
-             <div class="image">
+          <div class="image">
             <%= image_tag "road.png", alt: "alttext" %>
           </div>
-       </div>
-
+          <span><a href="#6" class="next round">&#8250;</a></span>
+        </div>
 
         <div class="surveystep" id="6">
+          <span><a href="#5" class="previous round">&#8249;</a></span>
           <div class="question" id="6">
-
             <%= f.input :prices, label: false, input_html: {class: "js-range-slider"}, wrapper: false %>
-            <div class="d-flex justify-content-around">
-            <a href="#5" class="btn btn-primary">Previous</a>
             <%= f.submit "Find cars", class: "btn btn-primary" %>
           </div>
-         </div>
-                <div class="image">
+          <div class="image">
             <%= image_tag "dame.png", alt: "alttext" %>
           </div>
         </div>
+      </div>
       <% end %>
     </div>
   </div>

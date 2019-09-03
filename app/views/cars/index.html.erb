@@ -1,6 +1,6 @@
 <form action="/cars/compare">
   <div class="cards">
-    <button onclick="topFunction()" id="myBtn" title="Go to compare">Compare</button>
+    <button onclick="topFunction()" id="myBtn" class="btn btn-primary" title="Go to compare">Compare</button>
       <% @cars.each do |car|%>
       <div class="col_12 col-lg-6 col-xl-4">
         <div data-aos="flip-right" data-aos-duration="800">
@@ -49,16 +49,19 @@
                 </div>
 
                 <div class="card_infos">
-                  <h2><%=car.model%></h5>
-
-                   <p>Passengers : <%=car.passengers%></p>
-                   <p>Year :       <%=car.year%></p>
-                   <p>Fuel :       <%=car.fuel%></p>
-                   <p>Crit'air :   <%=car.critair%></p>
-                   <p>Gearbox :    <%=car.gearbox%></p>
-                   <p>Trunk size : <%=car.trunk_size%> L</p>
-                   <h3>Price :     <%=car.price%> €</h3>
-                   <%=link_to "Get more info",car.link%>
+                  <div class="content">
+                    <h2><%=car.model%></h5>
+                     <p>Passengers : <%=car.passengers%></p>
+                     <p>Year :       <%=car.year%></p>
+                     <p>Fuel :       <%=car.fuel%></p>
+                     <p>Crit'air :   <%=car.critair%></p>
+                     <p>Gearbox :    <%=car.gearbox%></p>
+                     <p>Trunk size : <%=car.trunk_size%> L</p>
+                     <h3>Price :     <%=car.price%> €</h3>
+                    </div>
+                    <div class="link-infos">
+                    <%=link_to "More infos", car.link, class: 'btn btn-primary'%>
+                   </div>
                 </div>
 
                 <div id="fav<%= car.id%>" class="fav">

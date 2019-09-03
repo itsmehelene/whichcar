@@ -7,6 +7,7 @@ import "../components/compare";
 import 'balloon-css/balloon.css';
 import 'animate.css/animate.min.css'
 import 'ion-rangeslider'
+import '../components/movefunction'
 import aos from 'aos'
 import needAuth from '../components/need_auth'
 
@@ -16,28 +17,13 @@ $("#search_prices").ionRangeSlider({
   type: "double",
   grid: true,
   min: 0,
-  max: 100000,
+  max: 250000,
   from: 1000,
   to: 50000,
   step: 1000,
   skin: "round"
 });
 
-
-
-// const gra = function(min, max) {
-//     return Math.random() * (max - min) + min;
-// };
-// const init = function() {
-//     let items = document.querySelectorAll("li");
-//     for (let i = 0; i < items.length; i++) {
-//         // items[i].style.minHeight = gra(120, 205) + "vh";
-//         items[i].style.background = randomColor({ luminosity: "light" });
-//     }
-
-//     cssScrollSnapPolyfill();
-// };
-// init();
 
 needAuth()
 
