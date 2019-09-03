@@ -2,6 +2,7 @@ class CarsController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
+    cookies[:search_url] = request.url
     @cars = CarSearch.new(params[:search], current_user).search
   end
 
