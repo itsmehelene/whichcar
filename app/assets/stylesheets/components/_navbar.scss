@@ -1,10 +1,11 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: transparent;
-
-  position:absolute;
+  height: 100px;
+  position: absolute;
   width:100%;
-
+  margin-bottom: 20px;
+  top: 0;
 }
 
 .navbar-lewagon .navbar-collapse {
