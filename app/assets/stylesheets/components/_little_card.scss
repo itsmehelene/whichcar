@@ -54,7 +54,11 @@ button{
   padding:5px;
   border:0;
   background-color: #50DBAF;
-  opacity:0.5;
+  opacity: 0.85;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .modal-body {
@@ -85,7 +89,6 @@ background-color: transparent;
   color: black; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
   font-size: 18px; /* Increase font size */
 }
 
