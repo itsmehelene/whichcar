@@ -1,24 +1,44 @@
 Car.destroy_all
 puts "seed is starting"
-car = []
-car = Scraper.new
-puts "Scraper created"
-i = 0
-while i < car.model.size
-Car.create!(
-  model: car.model[i],
-  passengers: car.passenger[i],
-  year:car.year[i],
-  fuel:car.fuel[i],
-  critair: car.critair[i],
-  gearbox:car.gearbox[i],
-  trunk_size: car.truck[i],
-  photo: car.photo[i],
-  price: car.price[i],
-  car_type: car.car_type[i],
-  link: "https://www.aramisauto.com#{car.link[i]}")
-  puts "#{i}th one created"
-  i+=1
+# car = []
+# car = Scraper.new
+# puts "Scraper created"
+# i = 0
+# while i < car.model.size
+#   Car.create!(
+#     model: car.model[i],
+#     passengers: car.passenger[i],
+#     year:car.year[i],
+#     fuel:car.fuel[i],
+#     critair: car.critair[i],
+#     gearbox:car.gearbox[i],
+#     trunk_size: car.truck[i],
+#     photo: car.photo[i],
+#     price: car.price[i],
+#     car_type: car.car_type[i],
+#     link: "https://www.aramisauto.com#{car.link[i]}"
+#   )
+#   puts "#{i}th one created"
+#   i+=1
+# end
+
+
+links = Scraper.scrap_links
+links.each do |link|
+  scraper = Scraper.new(link)
+  Car.create!(
+    model: scraper.model,
+    passengers: scraper.passengers,
+    year: scraper.year,
+    fuel: scraper.fuel,
+    critair: scraper.critair,
+    gearbox: scraper.gearbox,
+    trunk_size: scraper.truck,
+    photo: scraper.photo,
+    price: scraper.price,
+    car_type: scraper.car_type,
+    link: link
+  )
 end
 
 # 2.times do
@@ -297,4 +317,3 @@ end
 #   car_type:"SUV",
 #   photo: "gmc.jpg",
 #   price: 80900)
-
