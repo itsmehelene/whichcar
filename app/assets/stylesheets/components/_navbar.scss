@@ -18,5 +18,11 @@
   margin-bottom: -20px;
 }
 .navbar-light .navbar-nav .nav-link{
-  color:white;
+  color: grey;
+}
+
+body.pages.home {
+  .navbar-light .navbar-nav .nav-link{
+  color: white;
+  }
 }
