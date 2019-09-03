@@ -37,7 +37,9 @@ links.each do |link|
     photo: scraper.photo,
     price: scraper.price,
     car_type: scraper.car_type,
-    link: link
+    link: link,
+    power_fiscal:scraper.horse_power_fiscal,
+    horse_power:scraper.horse_power
   )
 end
 
