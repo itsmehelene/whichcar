@@ -1,3 +1,4 @@
+//components rotation 
 @-webkit-keyframes rotating {
   from {
     transform: rotate(0deg);
@@ -16,11 +17,11 @@
   }
 }
 
-
+// triangle css
 .triangle {
   height: 0;
   width: 0;
-  position: absolute;
+  position: fixed;
   z-index: -1;
 }
 
@@ -51,7 +52,7 @@
   border-right: 25px solid transparent;
   animation: rotating-reverse 25s linear infinite;
   border-bottom: 40px solid rgb(98, 185, 197);
-  opacity: 0.5;
+  opacity: 0.4;
   right: 1556px;
   top: 80px;
 
@@ -74,6 +75,7 @@
   border-right: 10px solid transparent;
   animation: rotating 25s linear infinite;
   border-bottom: 20px solid rgb(120, 186, 144);
+  opacity: 0.4;
   left: 1630px;
   top: 690px;
 }
@@ -83,7 +85,7 @@
   border-right: 25px solid transparent;
   animation: rotating 25s linear infinite;
   border-bottom: 40px solid rgb(20, 186, 144);
-  opacity: 0.5;
+  opacity: 0.4;
   left: 1260px;
   top: 860px;
 }
@@ -92,7 +94,7 @@
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
   animation: rotating-reverse 25s linear infinite;
-  border-bottom: 40px solid rgb(98, 185, 197);
+  border-bottom: 40px solid #9cf196;
   opacity: 0.2;
   right: 1256px;
   top: 280px;
@@ -103,6 +105,7 @@
   border-right: 25px solid transparent;
   animation: rotating-reverse 45s linear infinite;
   border-bottom: 40px solid rgb(105, 202, 165);
+  opacity: 0.3;
   right: 80px;
   bottom: 1150px;
 }
@@ -112,6 +115,7 @@
   border-right: 10px solid transparent;
   animation: rotating 45s linear infinite;
   border-bottom: 20px solid rgb(120, 186, 144);
+  opacity: 0.3;
   left: 630px;
   bottom: 590px;
 }
@@ -121,6 +125,7 @@
   border-right: 25px solid transparent;
   animation: rotating 25s linear infinite;
   border-bottom: 40px solid rgb(20, 186, 144);
+  opacity: 0.3;
   right: 1660px;
   top: 760px;
 }
@@ -129,7 +134,7 @@
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
   animation: rotating-reverse 25s linear infinite;
-  border-bottom: 40px solid rgb(98, 185, 197);
+  border-bottom: 40px solid #64c4ed;
   opacity: 0.2;
   left: 1556px;
   top: 280px;
@@ -153,7 +158,7 @@
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
   animation: rotating-reverse 25s linear infinite;
-  border-bottom: 40px solid rgb(98, 185, 197);
+  border-bottom: 40px solid #4f81c7;
   opacity: 0.3;
   right: 556px;
   top: 580px;
@@ -183,20 +188,18 @@
 }
 
 
-
-
-
+//squares css
 .square {
-  position: absolute;
   opacity: 0.5;
+  position: fixed;
   z-index: -1;
 }
 
 .square1 {
 	height: 20px;
   width: 20px;
-  background-color: rgb(81, 150, 152);
-  opacity: 0.5;
+  background-color: #4f81c7;
+  opacity: 0.4;
   right: 1200px;
   top: 690px;
   animation: rotating 45s linear infinite;
@@ -225,7 +228,7 @@
 .square4 {
 	height: 40px;
   width: 40px;
-  background-color: rgb(81, 150, 152);
+  background-color: #64c4ed;
   animation: rotating 25s linear infinite;
   opacity: 0.3;
   right: 1123px;
@@ -237,7 +240,7 @@
   width: 10px;
   background-color: rgb(105, 202, 165);
   animation: rotating 45s linear infinite;
-  opacity: 0.5;
+  opacity: 0.4;
   right: 234px;
   bottom: 589px;
 }
@@ -245,7 +248,7 @@
 .square6 {
   height: 50px;
   width: 50px;
-  background-color: rgb(81, 150, 152);
+  background-color: #4f81c7;
   animation: rotating-reverse 25s linear infinite;
   opacity: 0.2;
   left: 1123px;
@@ -316,7 +319,7 @@
   width: 30px;
   background-color: #51dacf;
   animation: rotating-reverse 45s linear infinite;
-  opacity: 0.5;
+  opacity: 0.4;
   right: 1384px;
   bottom: 189px;
 }
@@ -336,7 +339,7 @@
   width: 10px;
   background-color: #b6e6bd;
   animation: rotating 45s linear infinite;
-  opacity: 0.5;
+  opacity: 0.4;
   right: 534px;
   bottom: 889px;
 }
