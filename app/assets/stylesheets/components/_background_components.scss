@@ -1,0 +1,72 @@
+#triangle-1 {
+	height: 0px;
+  width: 0px;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 40px solid rgb(120, 186, 144);
+   float: right;
+   // random: 76.07562deg;
+   // --random-2: calc(var(--random) + 360deg);
+  
+}
+
+@-webkit-keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  animation: rotating 15s linear infinite;
+}
+
+.triangle-2 {
+	height: 50px;
+  width: 50px;
+  background-color: rgb(20, 186, 144);
+}
+
+.triangle-3 {
+	height: 50px;
+  width: 50px;
+  background-color: rgb(98, 185, 197);
+}
+
+.triangle-4 {
+	height: 50px;
+  width: 50px;
+  background-color: rgb(105, 202, 165);
+}
+
+.square-1 {
+	height: 50px;
+  width: 50px;
+  background-color: rgb(81, 150, 152);
+}
+
+.square-2 {
+	height: 50px;
+  width: 50px;
+  background-color: rgb(120, 186, 144);
+}
+
+.square-3 {
+	height: 50px;
+  width: 50px;
+  background-color: rgb(105, 202, 165);
+}
+
+.square-4 {
+	height: 50px;
+  width: 50px;
+  background-color: rgb(81, 150, 152);
+}
+
+.square-5 {
+	height: 50px;
+  width: 50px;
+  background-color: rgb(120, 186, 144);
+}
