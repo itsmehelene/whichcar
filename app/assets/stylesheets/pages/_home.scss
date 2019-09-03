@@ -24,9 +24,7 @@ body.pages.home {
     align-items: center;
     justify-content: flex-start;
     padding: 48px;
-
     border-radius: 5px;
-    background-color: white;
 
     .previous.round{
       padding:40px;
@@ -238,13 +236,12 @@ body.pages.home {
   }
 }
 
-.surveystep {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: center;
-  position: relative;
-  border: 5px solid red;
+  .surveystep {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: center;
+    // position: relative;
+  }
 }
-

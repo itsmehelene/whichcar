@@ -7,10 +7,19 @@
   }
 }
 
+@-webkit-keyframes rotating-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+
 .triangle {
   height: 0;
   width: 0;
-  animation: rotating 15s linear infinite;
   position: absolute;
   z-index: -1;
 }
@@ -18,95 +27,317 @@
 .triangle1 { 
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
+  animation: rotating 45s linear infinite;
   border-bottom: 20px solid rgb(120, 186, 144);
-  left: 20px;
-  top: 20px;
+  opacity: 0.3;
+  left: 130px;
+  top: 290px;
 }
 
 .triangle2 { 
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
+  animation: rotating 25s linear infinite;
   border-bottom: 40px solid rgb(20, 186, 144);
-  left: 60px;
-  top: 60px;
+  opacity: 0.5;
+  left: 1260px;
+  top: 860px;
 }
 
-.triangle2 {
-  left: 460px;
+.triangle3 {
+	height: 20px;
+  width: 20px;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  animation: rotating-reverse 25s linear infinite;
+  border-bottom: 40px solid rgb(98, 185, 197);
+  opacity: 0.5;
+  right: 1556px;
   top: 80px;
+
 }
 
-// #triangle-1 {
-// 	height: 0px;
-//   width: 0px;
-//   border-left: 25px solid transparent;
-//   border-right: 25px solid transparent;
-//   border-bottom: 40px solid rgb(120, 186, 144);
-//    float: right;
-//    // random: 76.07562deg;
-//    // --random-2: calc(var(--random) + 360deg);
-// }
+.triangle4 {
+	height: 10px;
+  width: 30px;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  animation: rotating-reverse 45s linear infinite;
+  border-bottom: 40px solid rgb(105, 202, 165);
+  opacity: 0.2;
+  right: 780px;
+  top: 50px;
+}
 
-// .rotating1{
-//   animation: rotating 15s linear infinite;
-// }
+.triangle5 { 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  animation: rotating 25s linear infinite;
+  border-bottom: 20px solid rgb(120, 186, 144);
+  left: 1630px;
+  top: 690px;
+}
 
-// #triangle-2 {
-// 	height: 0px;
-//   width: 0px;
-//   border-left: 25px solid transparent;
-//   border-right: 25px solid transparent;
-//   border-bottom: 40px solid rgb(20, 186, 144);
-//   z-index: 1039;
-// }
+.triangle6 { 
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  animation: rotating 25s linear infinite;
+  border-bottom: 40px solid rgb(20, 186, 144);
+  opacity: 0.5;
+  left: 1260px;
+  top: 860px;
+}
 
-// .rotating2 {
-//   animation: rotating 40s linear infinite;
-// }
+.triangle7 {
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  animation: rotating-reverse 25s linear infinite;
+  border-bottom: 40px solid rgb(98, 185, 197);
+  opacity: 0.2;
+  right: 1256px;
+  top: 280px;
+}
 
-// #triangle-3 {
-// 	height: 50px;
-//   width: 50px;
-//  border-left: 25px solid transparent;
-//  border-right: 25px solid transparent;
-//  border-bottom: 40px solid rgb(98, 185, 197);
-// }
+.triangle8 {
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  animation: rotating-reverse 45s linear infinite;
+  border-bottom: 40px solid rgb(105, 202, 165);
+  right: 80px;
+  bottom: 1150px;
+}
 
-// #triangle-4 {
-// 	height: 50px;
-//   width: 50px;
-//   border-left: 25px solid transparent;
-//   border-right: 25px solid transparent;
-//   border-bottom: 40px solid rgb(105, 202, 165);
-// }
+.triangle9 { 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  animation: rotating 45s linear infinite;
+  border-bottom: 20px solid rgb(120, 186, 144);
+  left: 630px;
+  bottom: 590px;
+}
 
-// #square-1 {
-// 	height: 50px;
-//   width: 50px;
-//   background-color: rgb(81, 150, 152);
-// }
+.triangle10 { 
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  animation: rotating 25s linear infinite;
+  border-bottom: 40px solid rgb(20, 186, 144);
+  right: 1660px;
+  top: 760px;
+}
 
-// #square-2 {
-// 	height: 50px;
-//   width: 50px;
-//   background-color: rgb(120, 186, 144);
-// }
+.triangle11 {
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  animation: rotating-reverse 25s linear infinite;
+  border-bottom: 40px solid rgb(98, 185, 197);
+  opacity: 0.2;
+  left: 1556px;
+  top: 280px;
 
-// #square-3 {
-// 	height: 50px;
-//   width: 50px;
-//   background-color: rgb(105, 202, 165);
-// }
+}
 
-// #square-4 {
-// 	height: 50px;
-//   width: 50px;
-//   background-color: rgb(81, 150, 152);
-// }
+.triangle12 {
+  height: 10px;
+  width: 30px;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  animation: rotating 25s linear infinite;
+  border-bottom: 40px solid rgb(105, 202, 165);
+  opacity: 0.2;
+  right: 780px;
+  bottom: 550px;
+}
 
-// #square-5 {
-// 	height: 50px;
-//   width: 50px;
-//   background-color: rgb(120, 186, 144);
-// }
+
+.triangle13 {
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  animation: rotating-reverse 25s linear infinite;
+  border-bottom: 40px solid rgb(98, 185, 197);
+  opacity: 0.3;
+  right: 556px;
+  top: 580px;
+
+}
+
+.triangle14 {
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  animation: rotating 25s linear infinite;
+  border-bottom: 40px solid rgb(105, 202, 165);
+  opacity: 0.2;
+  right: 880px;
+  top: 250px;
+}
+
+.triangle15 {
+  height: 10px;
+  width: 30px;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  animation: rotating-reverse 45s linear infinite;
+  border-bottom: 40px solid rgb(105, 202, 165);
+  opacity: 0.2;
+  left: 50px;
+  top: 650px;
+}
+
+
+
+
+
+.square {
+  position: absolute;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.square1 {
+	height: 20px;
+  width: 20px;
+  background-color: rgb(81, 150, 152);
+  opacity: 0.5;
+  right: 1200px;
+  top: 690px;
+  animation: rotating 45s linear infinite;
+}
+
+.square2 {
+	height: 30px;
+  width: 30px;
+  background-color: rgb(120, 186, 144);
+  animation: rotating 25s linear infinite;
+  opacity: 0.3;
+  left: 1464px;
+  top: 40px;
+}
+
+.square3 {
+	height: 50px;
+  width: 50px;
+  background-color: rgb(105, 202, 165);
+  animation: rotating-reverse 45s linear infinite;
+  opacity: 0.2;
+  left: 234px;
+  top: 489px;
+}
+
+.square4 {
+	height: 40px;
+  width: 40px;
+  background-color: rgb(81, 150, 152);
+  animation: rotating 25s linear infinite;
+  opacity: 0.3;
+  right: 1123px;
+  bottom: 980px;
+}
+
+.square5 {
+  height: 10px;
+  width: 10px;
+  background-color: rgb(105, 202, 165);
+  animation: rotating 45s linear infinite;
+  opacity: 0.5;
+  right: 234px;
+  bottom: 589px;
+}
+
+.square6 {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(81, 150, 152);
+  animation: rotating-reverse 25s linear infinite;
+  opacity: 0.2;
+  left: 1123px;
+  top: 980px;
+}
+
+.square7 {
+  height: 30px;
+  width: 30px;
+  background-color: #35b0ab;
+   animation: rotating-reverse 45s linear infinite;
+   opacity: 0.2;
+  right: 1234px;
+  bottom: 1089px;
+}
+
+.square8 {
+  height: 20px;
+  width: 20px;
+  background-color: rgb(81, 150, 152);
+  animation: rotating 45s linear infinite;
+  opacity: 0.3;
+  left: 123px;
+  top: 980px;
+}
+
+.square9 {
+  height: 10px;
+  width: 10px;
+  background-color: #b6e6bd;
+  animation: rotating-reverse 45s linear infinite;
+  opacity: 0.3;
+  right: 234px;
+  bottom: 589px;
+}
+
+.square10 {
+  height: 20px;
+  width: 20px;
+  background-color: #4baea0;
+  animation: rotating 25s linear infinite;
+  right: 1123px;
+  top: 980px;
+}
+
+.square11 {
+  height: 30px;
+  width: 30px;
+  background-color: #51dacf;
+  animation: rotating-reverse 45s linear infinite;
+  opacity: 0.2;
+  right: 1234px;
+  bottom: 1089px;
+}
+
+.square12 {
+  height: 20px;
+  width: 20px;
+  background-color: #6bc5d2;
+  animation: rotating 25s linear infinite;
+  opacity: 0.2;
+  right: 76px;
+  top: 800px;
+}
+
+.square13 {
+  height: 30px;
+  width: 30px;
+  background-color: #51dacf;
+  animation: rotating-reverse 45s linear infinite;
+  opacity: 0.5;
+  right: 1384px;
+  bottom: 189px;
+}
+
+.square14 {
+  height: 20px;
+  width: 20px;
+  background-color: #6bc5d2;
+  animation: rotating 25s linear infinite;
+  opacity: 0.3;
+  right: 73px;
+  top: 380px;
+} 
+
+.square15 {
+  height: 10px;
+  width: 10px;
+  background-color: #b6e6bd;
+  animation: rotating 45s linear infinite;
+  opacity: 0.5;
+  right: 534px;
+  bottom: 889px;
+}
 
