@@ -8,6 +8,7 @@ import 'balloon-css/balloon.css';
 import 'animate.css/animate.min.css'
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'ion-rangeslider'
+import '../components/movefunction'
 import aos from 'aos'
 
 aos.init({})
