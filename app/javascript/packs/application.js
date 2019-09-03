@@ -6,10 +6,10 @@ import "../components/compare";
 // import "../components/move_card";
 import 'balloon-css/balloon.css';
 import 'animate.css/animate.min.css'
-import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'ion-rangeslider'
 import '../components/movefunction'
 import aos from 'aos'
+import needAuth from '../components/need_auth'
 
 aos.init({})
 
@@ -26,16 +26,28 @@ $("#search_prices").ionRangeSlider({
 
 
 
-const gra = function(min, max) {
-    return Math.random() * (max - min) + min;
-};
-const init = function() {
-    let items = document.querySelectorAll("li");
-    for (let i = 0; i < items.length; i++) {
-        // items[i].style.minHeight = gra(120, 205) + "vh";
-        items[i].style.background = randomColor({ luminosity: "light" });
-    }
+// const gra = function(min, max) {
+//     return Math.random() * (max - min) + min;
+// };
+// const init = function() {
+//     let items = document.querySelectorAll("li");
+//     for (let i = 0; i < items.length; i++) {
+//         // items[i].style.minHeight = gra(120, 205) + "vh";
+//         items[i].style.background = randomColor({ luminosity: "light" });
+//     }
 
-    cssScrollSnapPolyfill();
-};
-init();
+//     cssScrollSnapPolyfill();
+// };
+// init();
+
+needAuth()
+
+
+const modalCarId = new URLSearchParams(window.location.search).get('openModal')
+
+
+if (modalCarId) {
+  const modalId = "#myModal" + modalCarId
+  console.log(modalId)
+  $(modalId).modal('show')
+}

@@ -13,3 +13,4 @@ $('input[type=checkbox]').change(function(e){
         // swal("YOU CAN COMPARE MAXIMUM 3 CARS!");
    }
 })
+
