@@ -17,6 +17,8 @@
                 <p>Trunk size : <%=f.car.trunk_size%> L</p>
                 <h3>Price : <%=f.car.price%> €</h3>
                   <%=link_to "Get more information",f.car.link%>
+                  <span></span>
+                  <span id="share"><%= social_share_button_tag(f.car.model) %></span>
               </div>
             </div>
           </div>
