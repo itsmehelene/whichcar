@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('assets/banner-bkg.jpg');height:100vh;margin:0;" id="banner">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path("banner-bkg.jpg") %>');height:100vh;margin:0;" id="banner">
 
   <div class="containerx">
     <h1>WhichCar?</h1>
@@ -24,8 +24,8 @@
 
         <div class="surveystep" id="1">
 
-          <span><a href="#banner" class="previous round" id="first">&#8249;</a></span>
 
+          <span><a href="#banner" class="previous round" id="first">&#8249;</a></span>
           <div class="question">
             <%= f.input :passengers, collection: ["2", "5", "More than 5"], as: :radio_buttons, label: 'How many passengers ?', include_hidden: false,id:'question' %>
           </div>

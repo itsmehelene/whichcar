@@ -1,4 +1,5 @@
 body {
+
   background-color: white;
 }
 
@@ -17,6 +18,7 @@ body {
   margin: 10px 30px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);;
   height: 220px;
+  padding-bottom:10px;
 }
 
 .info_car {
@@ -52,3 +54,8 @@ body {
 //   background-color: red;
 //   z-index: 1041;
 // }
+
+ .social-share-button {
+  padding-left:30px;
+ }
+

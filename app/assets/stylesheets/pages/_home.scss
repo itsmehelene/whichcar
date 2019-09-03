@@ -7,9 +7,10 @@ body.pages.home {
   }
 
   .form-post {
-    height: 800px;
+    height: 1000px;
     display: flex;
     width: 7000px;
+    margin-top:5%;
   }
 
   .wrapper{
@@ -24,6 +25,10 @@ body.pages.home {
     align-items: center;
     justify-content: flex-start;
     padding: 48px;
+
+    padding-left:60px;
+
+
     border-radius: 5px;
 
     .previous.round{
@@ -33,6 +38,7 @@ body.pages.home {
       font-size:160px;
       text-decoration:none;
       opacity:0.5;
+      color:#0BD4A2;
     }
     .next.round{
       padding:40px;
@@ -41,6 +47,7 @@ body.pages.home {
       font-size:160px;
       text-decoration:none;
       opacity:0.5;
+      color:#0BD4A2;
     }
   }
 
@@ -176,7 +183,7 @@ body.pages.home {
 
 .downArrow{
   position: fixed;
-  bottom: 12%;
+  bottom: 10%;
   left: 49%;
 }
 
@@ -237,6 +244,7 @@ body.pages.home {
   }
 }
 
+
   .surveystep {
     height: 100vh;
     display: flex;
@@ -249,4 +257,5 @@ body.pages.home {
 
 .surveystep, .sign_button, .banner, input, label, .previous, .round, .next, .round, .form-post {
     box-shadow: 1px 1px 20px 20px #ffffffb8;
+
 }

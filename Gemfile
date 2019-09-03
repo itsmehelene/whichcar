@@ -21,6 +21,7 @@ gem 'pg_search', '~> 2.3.0'
 gem 'sweetalert-rails'
 gem 'nokogiri'
 gem 'awesome_print'
+gem 'social-share-button'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
