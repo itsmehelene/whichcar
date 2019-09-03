@@ -6,8 +6,8 @@ class Scraper
   def self.scrap_links
     links = []
     page = 1
-    while page < 2
-      doc = Nokogiri::HTML(open("https://www.aramisauto.com/achat/recherche?page=1#{page}").read)
+    while page < 76
+      doc = Nokogiri::HTML(open("https://www.aramisauto.com/achat/recherche?page=#{page}").read)
       doc.search('.real-link.vehicle-info-link').each do |link|
         links << "https://www.aramisauto.com" + link.attribute('href').value
       end
@@ -35,8 +35,11 @@ class Scraper
   end
 
   def fuel
-    match = @html_doc.search('.offer-car__resume li').first.text.match(/(Essence|Diesel|Hybride|Electric|Electrique)/)
-    match[0] if match
+    match = @html_doc.search('.offer-car__resume li').first.text
+    if match
+      match.match(/(Essence|Diesel|Hybride|Electric|Electrique)/)
+      return match[0]
+    end
   end
 
   def gearbox
