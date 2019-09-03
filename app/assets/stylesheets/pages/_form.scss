@@ -1,13 +1,4 @@
 // Form design
-html {
-  scroll-behavior: smooth;
-}
-
-
-
-
-
-
 .input {
   margin-left: 50px;
   display: flex;
@@ -15,11 +6,10 @@ html {
 
 
 .form-post {
-  margin-top: 50px;
-  padding: 20px;
+
   color: white;
   font-size: 35px;
-  width: 100%;
+
 
 
   h2 {
@@ -64,21 +54,6 @@ abbr {
   color: black;
 }
 
-
-.surveystep {
-  height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 48px;
-  margin-top: 40vh;
-  margin-bottom: 10vh;
-  border-radius: 5px;
-  background-color: white;
-  .btn{
-    width:40%;
-  }
-}
 
 .survey-step-odd {
   flex-direction: row-reverse;
