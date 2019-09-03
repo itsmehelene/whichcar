@@ -23,6 +23,9 @@
         <%= simple_form_for :search, url: cars_path, method: :get do |f| %>
 
         <div class="surveystep" id="1">
+          <div class="triangle triangle1"></div>
+          <div class="triangle triangle2"></div>
+
           <div class="question">
             <%= f.input :passengers, collection: ["2", "5", "More than 5"], as: :radio_buttons, label: 'How many passengers ?', include_hidden: false %>
             <div class="d-flex justify-content-around">
@@ -35,7 +38,10 @@
           </div>
         </div>
 
-        <div class="surveystep survey-step-odd" id="2">
+        <div class="surveystep survey-step-odd" id="2">          
+          <div class="triangle triangle1"></div>
+          <div class="triangle triangle2"></div>
+
           <div class="question">
           <%= f.input :gearbox, collection: ["Auto", "Manual"], as: :radio_buttons, label: 'What gearbox do you want ?', include_hidden: false  %>
           <div class="d-flex justify-content-around">

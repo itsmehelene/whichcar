@@ -203,5 +203,7 @@ body.pages.home {
     align-items: center;
     justify-content: center;
     scroll-snap-align: center;
+    position: relative;
+    border: 5px solid red;
   }
 }

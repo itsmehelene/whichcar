@@ -1,15 +1,3 @@
-#triangle-1 {
-	height: 0px;
-  width: 0px;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
-  border-bottom: 40px solid rgb(120, 186, 144);
-   float: right;
-   // random: 76.07562deg;
-   // --random-2: calc(var(--random) + 360deg);
-  
-}
-
 @-webkit-keyframes rotating {
   from {
     transform: rotate(0deg);
@@ -19,54 +7,106 @@
   }
 }
 
-.rotating {
+.triangle {
+  height: 0;
+  width: 0;
   animation: rotating 15s linear infinite;
+  position: absolute;
+  z-index: -1;
 }
 
-.triangle-2 {
-	height: 50px;
-  width: 50px;
-  background-color: rgb(20, 186, 144);
+.triangle1 { 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid rgb(120, 186, 144);
+  left: 20px;
+  top: 20px;
 }
 
-.triangle-3 {
-	height: 50px;
-  width: 50px;
-  background-color: rgb(98, 185, 197);
+.triangle2 { 
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 40px solid rgb(20, 186, 144);
+  left: 60px;
+  top: 60px;
 }
 
-.triangle-4 {
-	height: 50px;
-  width: 50px;
-  background-color: rgb(105, 202, 165);
+div#2 .triangle2 {
+  left: 460px;
+  top: 80px;
 }
 
-.square-1 {
-	height: 50px;
-  width: 50px;
-  background-color: rgb(81, 150, 152);
-}
+// #triangle-1 {
+// 	height: 0px;
+//   width: 0px;
+//   border-left: 25px solid transparent;
+//   border-right: 25px solid transparent;
+//   border-bottom: 40px solid rgb(120, 186, 144);
+//    float: right;
+//    // random: 76.07562deg;
+//    // --random-2: calc(var(--random) + 360deg);
+// }
 
-.square-2 {
-	height: 50px;
-  width: 50px;
-  background-color: rgb(120, 186, 144);
-}
+// .rotating1{
+//   animation: rotating 15s linear infinite;
+// }
 
-.square-3 {
-	height: 50px;
-  width: 50px;
-  background-color: rgb(105, 202, 165);
-}
+// #triangle-2 {
+// 	height: 0px;
+//   width: 0px;
+//   border-left: 25px solid transparent;
+//   border-right: 25px solid transparent;
+//   border-bottom: 40px solid rgb(20, 186, 144);
+//   z-index: 1039;
+// }
 
-.square-4 {
-	height: 50px;
-  width: 50px;
-  background-color: rgb(81, 150, 152);
-}
+// .rotating2 {
+//   animation: rotating 40s linear infinite;
+// }
 
-.square-5 {
-	height: 50px;
-  width: 50px;
-  background-color: rgb(120, 186, 144);
-}
+// #triangle-3 {
+// 	height: 50px;
+//   width: 50px;
+//  border-left: 25px solid transparent;
+//  border-right: 25px solid transparent;
+//  border-bottom: 40px solid rgb(98, 185, 197);
+// }
+
+// #triangle-4 {
+// 	height: 50px;
+//   width: 50px;
+//   border-left: 25px solid transparent;
+//   border-right: 25px solid transparent;
+//   border-bottom: 40px solid rgb(105, 202, 165);
+// }
+
+// #square-1 {
+// 	height: 50px;
+//   width: 50px;
+//   background-color: rgb(81, 150, 152);
+// }
+
+// #square-2 {
+// 	height: 50px;
+//   width: 50px;
+//   background-color: rgb(120, 186, 144);
+// }
+
+// #square-3 {
+// 	height: 50px;
+//   width: 50px;
+//   background-color: rgb(105, 202, 165);
+// }
+
+// #square-4 {
+// 	height: 50px;
+//   width: 50px;
+//   background-color: rgb(81, 150, 152);
+// }
+
+// #square-5 {
+// 	height: 50px;
+//   width: 50px;
+//   background-color: rgb(120, 186, 144);
+// }
+

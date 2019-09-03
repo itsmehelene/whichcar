@@ -1,42 +1,37 @@
-<div class="container-fav">
-  <h2>Your Favourites</h2>
+<div class="home">
+  <div class="container-fav ">
+    <h2>Your Favourites</h2>
     <div class="info_fav">
-      <%@favourites.each do|f|%>
-      <div class="car_infos">
-        <div class="car_description">
-          <%= image_tag f.car.photo ,class: "photos"%>
-          <div class="info_car">
-            <h3><%=f.car.model%></h3>
-            <div class="infos">
-              <div class="info">
-                <p>Passengers : <%=f.car.passengers%></p>
-                <p>Year :       <%=f.car.year%></p>
-                <p>Fuel :       <%=f.car.fuel%></p>
-                <p>Crit'air :   <%=f.car.critair%></p>
-                <p>Gearbox :    <%=f.car.gearbox%></p>
-                <p>Trunk size : <%=f.car.trunk_size%> L</p>
-                <h3>Price : <%=f.car.price%> €</h3>
+      <% @favourites.each do|f|%>
+        <div class="car_infos">
+          <div class="car_description">
+            <%= image_tag f.car.photo ,class: "photos"%>
+            <div class="info_car">
+              <h3><%=f.car.model%></h3>
+              <div class="infos">
+                <div class="info ">
+                  <p>Passengers : <%=f.car.passengers%></p>
+                  <p>Year :       <%=f.car.year%></p>
+                  <p>Fuel :       <%=f.car.fuel%></p>
+                  <p>Crit'air :   <%=f.car.critair%></p>
+                  <p>Gearbox :    <%=f.car.gearbox%></p>
+                  <p>Trunk size : <%=f.car.trunk_size%> L</p>
+                  <h3>Price : <%=f.car.price%> €</h3>
                   <%=link_to "Get more information",f.car.link%>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    <%end%>
+      <%end%>
+      
+<!--       <div id="square-1"    class="rotating1"></div>
+      <div id="square-2"    class="rotating2"></div>
+      <div id="square-3"    class="rotating3"></div>
+      <div id="square-4"    class="rotating4"></div>
+ -->    </div>
   </div>
 </div>
-
-
 <!-- background -->
 
-<div class="home">
-  <div id="triangle-1" class="rotating"></div>
-  <div id="triangle-2" class="rotating"></div>
-  <div id="triangle-3" class="rotating"></div>
-  <div id="triangle-4" class="rotating"></div>
-  <div id="square" class="rotating"></div>
-  <div id="square" class="rotating"></div>
-  <div id="square" class="rotating"></div>
-  <div id="square" class="rotating"></div>
-  <div id="square" class="rotating"></div>
-</div>
+
