@@ -1,0 +1,5 @@
+meta_product_name: "WhichCar?"
+meta_title: "WhichCar? - Find your perfect car"
+meta_description: "Looking for a car ? WhichCar? will help you easily find one !"
+meta_image: "whichcar.png" # should exist in `app/assets/images/`
+twitter_account: "@whichcar285"
