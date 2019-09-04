@@ -22,7 +22,7 @@ class CarSearch
     filter_by_items        if @params.key? :items
     filter_by_ecology      if @params.key? :ecology
     filter_by_gearbox      if @params.key? :gearbox
-    # filter_by_road         if @params.key? :road
+    # filter_by_power        if @params.key? :power
     @cars
   end
 
@@ -49,7 +49,7 @@ class CarSearch
     elsif @params[:items] == " A little bit"
       @cars = @cars.where(trunk_size: 350..700)
     else @params[:items] == "A lot"
-      @cars = @cars.where("trunk_size > ?", 700)
+      @cars = @cars.where("trunk_size > ?", 600)
     end
   end
 
@@ -67,7 +67,11 @@ class CarSearch
     end
   end
 
-  # def filter_by_road
-  #   @cars = @cars.where(road: @params[:road])
+  # def filter_by_power
+  #    if @params[:power] == "Yes"
+  #     @cars = @cars.where("power_fiscal <= ?", )
+  #   else
+  #     @cars = @cars.where(power: ["", ""])
+  #   end
   # end
 end
