@@ -39,6 +39,7 @@
     text-align:left;
     flex-grow: 1;
     padding:0;
+    position:relative;
   }
 
   .options {
@@ -55,6 +56,9 @@ button{
   border:0;
   background-color: #50DBAF;
   opacity: 0.85;
+  position: absolute;
+  right: -25px;
+  bottom: -19px;
 
   &:hover {
     opacity: 1;
