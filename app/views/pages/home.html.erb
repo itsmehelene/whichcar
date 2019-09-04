@@ -71,7 +71,7 @@
         <div class="surveystep" id="5">
           <span><a href="#4" class="previous round">&#8249;</a></span>
           <div class="question">
-            <%= f.input :road, collection: ["In the city", "On the highway"], as: :radio_buttons, label: 'Where do you often drive ?', include_hidden: false  %>
+            <%= f.input :road, collection: ["In the city", "On the highway"], as: :radio_buttons, label: 'Where do you often drive?', include_hidden: false  %>
           </div>
           <div class="image">
             <%= image_tag "road.png", alt: "alttext" %>
@@ -82,7 +82,8 @@
         <div class="surveystep" id="6">
           <span><a href="#5" class="previous round">&#8249;</a></span>
           <div class="question" id="6">
-            <%= f.input :prices, label: false, input_html: {class: "js-range-slider"}, wrapper: false %>
+            <p style="color:black">Prices</p>
+            <%=f.input :prices, label: false, input_html: {class: "js-range-slider"}, wrapper: false %>
             <%= f.submit "Find cars", class: "btn btn-primary" %>
           </div>
           <div class="image">

@@ -56,14 +56,18 @@ button{
   border:0;
   background-color: #50DBAF;
   opacity: 0.85;
-  position: absolute;
-  right: -25px;
-  bottom: -19px;
 
   &:hover {
     opacity: 1;
   }
 }
+
+.see_more {
+  position: absolute;
+  right: -25px;
+  bottom: -19px;
+}
+
 
 .modal-body {
 background-color: transparent;

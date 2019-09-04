@@ -11,7 +11,7 @@ const needAuth = () => {
         text: "Do you want to log in ?",
         type: 'warning',
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
+        confirmButtonColor: '#50DBAF',
         cancelButtonColor: '#d33',
         confirmButtonText: 'Login'
       }).then((result) => {
