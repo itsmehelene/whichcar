@@ -73,20 +73,32 @@ body.favourites.show{
   }
 
 }
+
 .photo_car{
   margin-left: 35%;
   margin-bottom:50px;
   width:300px;
 }
+
 .share{
   display:flex;
   flex-direction:grid-template-columns;
 }
-  .social-share-button{
-    padding-left:25px;
-  }
-  .social-share-button > a{
-    font-size: 40px;
 
-  }
+.social-share-button{
+  padding-left:25px;
+}
+
+.social-share-button > a{
+  font-size: 40px;
+}
+
+.compare-item{
+  font-size:24px;
+  margin-bottom:30px;
+}
+h4{
+  text-align:center;
+}
+
 }
