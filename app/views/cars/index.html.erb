@@ -33,7 +33,9 @@
   </div>
 </form>
 
-
+<% if @cars.blank? %>
+  <p class="cars-blankslate"></p>
+<% end %>
 <% @cars.each do |car|%>
   <div class="modal fade" id="myModal<%= car.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog modal-xl animated zoomInUp" role="document">

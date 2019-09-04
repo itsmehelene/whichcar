@@ -3,6 +3,7 @@
 import "bootstrap";
 // import "../components/slider";
 import "../components/compare";
+import "../components/alertfunction";
 // import "../components/move_card";
 import 'balloon-css/balloon.css';
 import 'animate.css/animate.min.css'

@@ -4,6 +4,10 @@ class CarsController < ApplicationController
   def index
     cookies[:search_url] = request.url
     @cars = CarSearch.new(params[:search], current_user).search
+    if @cars.nil?
+      flash.now[:error] = "Your book was not found"
+      render :index
+    end
   end
 
   def show
