@@ -1,7 +1,7 @@
 .cards{
   // margin-top: 3%;
   margin-left: 50px;
-  margin-right: 50px;
+  margin-right: 100px;
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 15px;
@@ -27,7 +27,6 @@
 
   .photo{
     img {
-      border-radius: 5px 5px 0 0;
       width:200px;
       height: 140px;
       }
@@ -42,6 +41,8 @@
     display: flex;
     flex-direction: column;
     align-self: flex-start;
+    justify-content: space-between;
+    align-self: stretch;
   }
 
   .options {
@@ -96,8 +97,8 @@ background-color: transparent;
 #myBtn {
   // display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
-  bottom: 60px; /* Place the button at the bottom of the page */
-  right: 60px; /* Place the button 30px from the right */
+  // bottom: 60px; /* Place the button at the bottom of the page */
+  // right: 60px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
@@ -106,6 +107,10 @@ background-color: transparent;
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
   font-size: 18px; /* Increase font size */
+  transform: rotate(-90deg);  
+  position: absolute; 
+  top: 370px;
+  right: 0px; 
 }
 
 #myBtn:hover {
