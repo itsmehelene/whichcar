@@ -1,16 +1,15 @@
 .cards{
-  margin-top:3%;
-  margin-left:10%;
-  margin-right:10%;
+  margin-top: 3%;
+  margin-left: 50px;
+  margin-right: 10px;
   display:grid;
-  grid-template-columns:1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 15px;
 }
 
 .card_car {
-
   flex-grow:1;
-  width: 500px;
+  width: 400px;
   height: 150px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -63,9 +62,10 @@ button{
 }
 
 .see_more {
-  position: absolute;
-  right: -25px;
-  bottom: -19px;
+  // position: absolute;
+  // right: -25px;
+  // bottom: -19px;
+
 }
 
 
@@ -75,13 +75,19 @@ background-color: transparent;
 
 @media(max-width: 1500px) {
   .cards {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 @media(max-width: 750px) {
   .cards {
     grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width: 750px) {
+  .cards {
+    grid-template-columns: 2fr;
   }
 }
 
