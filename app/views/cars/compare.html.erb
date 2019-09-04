@@ -14,7 +14,7 @@
 
   <h4 class="font-weight-bold">Model</h4>
   <hr>
-  <div class="compare-items">
+  <div class="compare-items text">
     <%@cars.each do |car|%>
       <div class="compare-item">
         <%=car.model%>
@@ -74,7 +74,7 @@
   <br>
   <h4 class="font-weight-bold">The Size Of The Trunk</h4>
   <hr>
-  <div class="compare-items">
+  <div class="compare-items text">
     <%@cars.each do |car|%>
       <div class="compare-item">
         <%=car.trunk_size%>L
@@ -112,11 +112,23 @@
   <hr>
   <div class="compare-items">
     <%@cars.each do |car|%>
-      <div class="compare-item">
+      <div class="compare-item text">
         <%=car.year%>
       </div>
     <%end%>
   </div>
 
+  <br>
+  <h4 class="font-weight-bold">Power</h4>
+  <hr>
+  <div class="compare-items">
+    <%@cars.each do |car|%>
+      <div class="compare-item text-power">
+        <%=car.horse_power%> ch
+        so
+        <%=car.power_fiscal%> CV
+      </div>
+    <%end%>
+  </div>
 </div>
 </div>
