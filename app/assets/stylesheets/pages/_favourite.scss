@@ -1,61 +1,92 @@
-body {
+// body {
 
-  background-color: white;
-}
+//   background-color: white;
+// }
 
-.container-fav {
-  margin: 40px 75px;
-}
+// .container-fav {
+//   margin: 0 auto;
+// }
 
-.info_fav {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+// .info_fav {
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
 
-}
+// }
 
 .car_description {
   display:flex;
-  margin: 10px 30px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);;
+  margin: 10px 50px;
   height: 220px;
   padding-bottom:10px;
+  a{
+  text-decoration:none;
+  color:#1F6061;
+}
 }
 
-.info_car {
-  flex-grow:1;
-  padding-left: 30px;
-  align-self: center;
-}
-
-.infos {
-  display:flex;
-}
-
-.info {
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: space-around;
-  width: 100%;
-
-  & > *:nth-child(even) {
-    padding-left: 76px;
-  }
-
-  h3 {
-      align-self: center;
-  }
-
-  a {
-    margin-top: 9px;
-  }
-}
-
-// .car_infos {
-//   background-color: red;
-//   z-index: 1041;
+// .info_car {
+//   flex-grow:1;
+//   padding-left: 30px;
+//   align-self: center;
 // }
 
- .social-share-button {
-  padding-left:30px;
- }
+// .infos {
+//   display:flex;
+// }
 
+// .info {
+//   display:grid;
+//   grid-template-columns: repeat(2, 1fr);
+//   justify-content: space-around;
+//   width: 100%;
+
+//   & > *:nth-child(even) {
+//     padding-left: 76px;
+//   }
+
+//   h3 {
+//       align-self: center;
+//   }
+
+//   a {
+//     margin-top: 9px;
+//   }
+// }
+
+// // .car_infos {
+// //   background-color: red;
+// //   z-index: 1041;
+// // }
+
+//  .social-share-button {
+//   padding-left:30px;
+//  }
+body.favourites.show{
+.share_link{
+  display: flex;
+  padding: 40px;
+  font-size: 30px;
+  justify-content:space-between;
+  a{
+    text-decoration: none;
+    color:#1F6061;
+  }
+
+}
+.photo_car{
+  margin-left: 35%;
+  margin-bottom:50px;
+  width:300px;
+}
+.share{
+  display:flex;
+  flex-direction:grid-template-columns;
+}
+  .social-share-button{
+    padding-left:25px;
+  }
+  .social-share-button > a{
+    font-size: 40px;
+
+  }
+}

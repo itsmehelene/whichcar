@@ -3,6 +3,10 @@ class FavouritesController < ApplicationController
     @favourites = Favourite.all
   end
 
+  def show
+    @favourite = Favourite.find(params[:id])
+  end
+
   def create
     @car = Car.find(params[:car_id])
     @favourite = Favourite.new(car: @car, user: current_user)

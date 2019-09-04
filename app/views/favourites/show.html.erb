@@ -1,0 +1,110 @@
+<div class="container" style="margin:0 auto;">
+<div class="container_compare">
+  <div class="compare-items">
+      <div class="compare-item" style="align-items: center;">
+
+          <%=image_tag @favourite.car.photo,class: 'photo_car'%><br>
+
+
+      </div>
+
+  </div>
+
+  <h4 class="font-weight-bold">Model</h4>
+  <hr>
+  <div class="compare-items">
+
+      <div class="compare-item" style="text-align: center;">
+        <%=@favourite.car.model%>
+      </div>
+
+  </div>
+
+  <br>
+  <h4 class="font-weight-bold">Fuel Type</h4>
+  <hr>
+  <div class="compare-items">
+
+      <div class="compare-item" style="text-align: center;">
+        <%=@favourite.car.fuel%>
+      </div>
+
+  </div>
+
+  <br>
+  <h4 class="font-weight-bold">Gearbox Type</h4>
+  <hr>
+    <div class="compare-items">
+
+      <div class="compare-item" style="text-align: center;">
+        <%=@favourite.car.gearbox.capitalize%>
+      </div>
+
+  </div>
+
+   <br>
+  <h4 class="font-weight-bold">Available Passenger Number</h4>
+  <hr>
+    <div class="compare-items">
+
+      <div class="compare-item" style="text-align: center;">
+        <%=@favourite.car.passengers%>
+      </div>
+
+  </div>
+
+  <br>
+  <h4 class="font-weight-bold">The Size Of The Trunk</h4>
+  <hr>
+    <div class="compare-items">
+
+      <div class="compare-item" style="text-align: center;">
+        <%=@favourite.car.trunk_size%>
+      </div>
+
+  </div>
+
+  <br>
+  <h4 class="font-weight-bold">Crit'air</h4>
+  <hr>
+    <div class="compare-items">
+
+      <div class="compare-item" style="text-align: center;">
+        <%=@favourite.car.critair%>
+      </div>
+
+  </div>
+
+  <br>
+  <h4 class="font-weight-bold">The Year Of Releasing</h4>
+  <hr>
+  <div class="compare-items">
+
+      <div class="compare-item" style="text-align: center;">
+        <%=@favourite.car.year%>
+      </div>
+
+  </div>
+
+  <br>
+  <h4 class="font-weight-bold">Price</h4>
+  <hr>
+  <div class="compare-items">
+
+      <div class="compare-item" style="text-align: center;">
+        <%=@favourite.car.price%> €
+      </div>
+
+  </div>
+
+  <div class="share_link">
+    <%=link_to "Get more information",@favourite.car.link%>
+    <span id="share">Share it!<%= social_share_button_tag(favourite_url(@favourite))%></span>
+  </div>
+
+</div>
+</div>
+
+
+
+

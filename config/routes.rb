@@ -11,6 +11,6 @@ Rails.application.routes.draw do
     resources :favourites, only: [:create]
   end
 
-  resources :favourites,only: [:index, :destroy]
+  resources :favourites,only: [:index,:show, :destroy]
   devise_for :user
 end
