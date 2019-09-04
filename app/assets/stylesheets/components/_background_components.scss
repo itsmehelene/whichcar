@@ -41,8 +41,8 @@
   animation: rotating 25s linear infinite;
   border-bottom: 40px solid rgb(20, 186, 144);
   opacity: 0.5;
-  left: 1260px;
-  top: 860px;
+  left: 860px;
+  bottom: 460px;
 }
 
 .triangle3 {
@@ -53,7 +53,7 @@
   animation: rotating-reverse 25s linear infinite;
   border-bottom: 40px solid rgb(98, 185, 197);
   opacity: 0.4;
-  right: 1556px;
+  right: 856px;
   top: 80px;
 
 }
@@ -67,7 +67,7 @@
   border-bottom: 40px solid rgb(105, 202, 165);
   opacity: 0.2;
   right: 780px;
-  top: 50px;
+  bottom: 50px;
 }
 
 .triangle5 { 
@@ -76,8 +76,8 @@
   animation: rotating 25s linear infinite;
   border-bottom: 20px solid rgb(120, 186, 144);
   opacity: 0.4;
-  left: 1630px;
-  top: 690px;
+  left: 690px;
+  top: 390px;
 }
 
 .triangle6 { 
@@ -86,7 +86,7 @@
   animation: rotating 25s linear infinite;
   border-bottom: 40px solid rgb(20, 186, 144);
   opacity: 0.4;
-  left: 1260px;
+  left: 1060px;
   top: 860px;
 }
 
@@ -96,8 +96,8 @@
   animation: rotating-reverse 25s linear infinite;
   border-bottom: 40px solid #9cf196;
   opacity: 0.2;
-  right: 1256px;
-  top: 280px;
+  right: 1056px;
+  bottom: 280px;
 }
 
 .triangle8 {
@@ -107,7 +107,7 @@
   border-bottom: 40px solid rgb(105, 202, 165);
   opacity: 0.3;
   right: 80px;
-  bottom: 1150px;
+  top: 150px;
 }
 
 .triangle9 { 
@@ -117,7 +117,7 @@
   border-bottom: 20px solid rgb(120, 186, 144);
   opacity: 0.3;
   left: 630px;
-  bottom: 590px;
+  top: 40px;
 }
 
 .triangle10 { 
@@ -126,7 +126,7 @@
   animation: rotating 25s linear infinite;
   border-bottom: 40px solid rgb(20, 186, 144);
   opacity: 0.3;
-  right: 1660px;
+  right: 1060px;
   top: 760px;
 }
 
@@ -136,7 +136,7 @@
   animation: rotating-reverse 25s linear infinite;
   border-bottom: 40px solid #64c4ed;
   opacity: 0.2;
-  left: 1556px;
+  left: 1356px;
   top: 280px;
 
 }
@@ -149,8 +149,8 @@
   animation: rotating 25s linear infinite;
   border-bottom: 40px solid rgb(105, 202, 165);
   opacity: 0.2;
-  right: 780px;
-  bottom: 550px;
+  right: 380px;
+  top: 50px;
 }
 
 
@@ -200,8 +200,8 @@
   width: 20px;
   background-color: #4f81c7;
   opacity: 0.4;
-  right: 1200px;
-  top: 690px;
+  right: 500px;
+  top: 390px;
   animation: rotating 45s linear infinite;
 }
 
@@ -211,8 +211,8 @@
   background-color: rgb(120, 186, 144);
   animation: rotating 25s linear infinite;
   opacity: 0.3;
-  left: 1464px;
-  top: 40px;
+  left: 1264px;
+  bottom: 40px;
 }
 
 .square3 {
@@ -221,8 +221,8 @@
   background-color: rgb(105, 202, 165);
   animation: rotating-reverse 45s linear infinite;
   opacity: 0.2;
-  left: 234px;
-  top: 489px;
+  left: 134px;
+  top: 539px;
 }
 
 .square4 {
@@ -232,7 +232,7 @@
   animation: rotating 25s linear infinite;
   opacity: 0.3;
   right: 1123px;
-  bottom: 980px;
+  bottom: 780px;
 }
 
 .square5 {
@@ -252,7 +252,7 @@
   animation: rotating-reverse 25s linear infinite;
   opacity: 0.2;
   left: 1123px;
-  top: 980px;
+  top: 580px;
 }
 
 .square7 {
@@ -262,7 +262,7 @@
    animation: rotating-reverse 45s linear infinite;
    opacity: 0.2;
   right: 1234px;
-  bottom: 1089px;
+  bottom: 689px;
 }
 
 .square8 {
@@ -272,7 +272,7 @@
   animation: rotating 45s linear infinite;
   opacity: 0.3;
   left: 123px;
-  top: 980px;
+  top: 680px;
 }
 
 .square9 {
@@ -291,7 +291,7 @@
   background-color: #4baea0;
   animation: rotating 25s linear infinite;
   right: 1123px;
-  top: 980px;
+  bottom: 550px;
 }
 
 .square11 {
@@ -301,7 +301,7 @@
   animation: rotating-reverse 45s linear infinite;
   opacity: 0.2;
   right: 1234px;
-  bottom: 1089px;
+  bottom: 689px;
 }
 
 .square12 {
@@ -311,7 +311,7 @@
   animation: rotating 25s linear infinite;
   opacity: 0.2;
   right: 76px;
-  top: 800px;
+  top: 700px;
 }
 
 .square13 {
@@ -320,7 +320,7 @@
   background-color: #51dacf;
   animation: rotating-reverse 45s linear infinite;
   opacity: 0.4;
-  right: 1384px;
+  right: 984px;
   bottom: 189px;
 }
 
@@ -330,7 +330,7 @@
   background-color: #6bc5d2;
   animation: rotating 25s linear infinite;
   opacity: 0.3;
-  right: 73px;
+  right: 173px;
   top: 380px;
 } 
 
@@ -341,6 +341,6 @@
   animation: rotating 45s linear infinite;
   opacity: 0.4;
   right: 534px;
-  bottom: 889px;
+  bottom: 689px;
 }
 

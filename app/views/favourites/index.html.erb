@@ -6,7 +6,9 @@
             <%= image_tag f.car.photo ,class: "photos"%>
             <div class="detail pl-3">
               <h3><%=f.car.model%></h3>
+
               <%=link_to "Click here if you want to see the details",favourite_path(f)%>
+
             </div>
           </div>
       <%end%>
