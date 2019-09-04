@@ -13,7 +13,7 @@
               <% if car.car_type == "0km"%>
               <p>New</p>
               <%else%>
-              <%=car.car_type.capitalize%>
+              <%=car.car_type.to_s.capitalize%>
               <%end%>
                <h6><%=car.price%> €</h6>
               <button type="button" id= "<%= car.id %>" data-toggle="modal" data-target="#myModal<%= car.id %>" class='see_more'> See More >
