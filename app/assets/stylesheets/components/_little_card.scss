@@ -1,7 +1,7 @@
 .cards{
-  margin-top: 3%;
+  // margin-top: 3%;
   margin-left: 50px;
-  margin-right: 10px;
+  margin-right: 50px;
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 15px;
@@ -9,14 +9,15 @@
 
 .card_car {
   flex-grow:1;
-  width: 400px;
-  height: 150px;
+  width: 100%;
+  height: 100%;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: $our-color;
+  padding:10px;
 
     // display: flex;
     // border-radius: 5px;
@@ -26,7 +27,6 @@
 
   .photo{
     img {
-    padding:5px;
       border-radius: 5px 5px 0 0;
       width:200px;
       height: 140px;
@@ -39,6 +39,9 @@
     flex-grow: 1;
     padding:0;
     position:relative;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
   }
 
   .options {
@@ -62,10 +65,9 @@ button{
 }
 
 .see_more {
-  // position: absolute;
-  // right: -25px;
-  // bottom: -19px;
-
+  position: absolute;
+  top: 111px;
+  right: -27px;
 }
 
 
