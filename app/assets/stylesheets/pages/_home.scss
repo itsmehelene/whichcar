@@ -7,7 +7,7 @@ body.pages.home {
   }
 
   .form-post {
-    height: 1000px;
+    height: auto;
     display: flex;
     width: 7000px;
     margin-top:5%;
@@ -25,7 +25,7 @@ body.pages.home {
     align-items: center;
     justify-content: flex-start;
     padding: 48px;
-
+    position:sticky;
     padding-left:60px;
 
 
@@ -251,8 +251,6 @@ body.pages.home {
     align-items: center;
     justify-content: center;
     scroll-snap-align: center;
-
-  }
 }
-
-
+  
+}

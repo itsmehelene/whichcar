@@ -17,7 +17,7 @@
               <%=car.car_type%>
               <%end%>
                <h6><%=car.price%> €</h6>
-              <button type="button" id= "<%= car.id %>" data-toggle="modal" data-target="#myModal<%= car.id %>"> See More >
+              <button type="button" id= "<%= car.id %>" data-toggle="modal" data-target="#myModal<%= car.id %>" class='see_more'> See More >
               </button>
             </div>
             <div class='options'>
@@ -64,7 +64,7 @@
                      <h3>Price :     <%=car.price%> €</h3>
                     </div>
                     <div class="link-infos">
-                    <%=link_to "More infos", car.link, class: 'btn btn-primary'%>
+                    <%=link_to "More infos", car.link, class: 'btn btn-primary more_infos'%>
                    </div>
                 </div>
 
