@@ -99,12 +99,10 @@
 
   <div class="share_link">
     <%=link_to "Get more informations",@favourite.car.link%>
-    <span id="share">Share it!<%= social_share_button_tag(favourite_url(@favourite))%></span>
+    <span id="share">Share it!<%= social_share_button_tag(@favourite.car.model, desc: "Go and check out my car!", via: "WhichCar")%></span>
   </div>
 
 </div>
 </div>
-
-
 
 
