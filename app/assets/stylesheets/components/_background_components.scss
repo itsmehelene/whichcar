@@ -28,7 +28,7 @@
 .triangle1 { 
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  animation: rotating 45s linear infinite;
+  animation: rotating 55s linear infinite;
   border-bottom: 20px solid rgb(120, 186, 144);
   opacity: 0.3;
   left: 130px;
@@ -38,7 +38,7 @@
 .triangle2 { 
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
-  animation: rotating 25s linear infinite;
+  animation: rotating 35s linear infinite;
   border-bottom: 40px solid rgb(20, 186, 144);
   opacity: 0.5;
   left: 860px;
@@ -50,7 +50,7 @@
   width: 20px;
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
-  animation: rotating-reverse 25s linear infinite;
+  animation: rotating-reverse 35s linear infinite;
   border-bottom: 40px solid rgb(98, 185, 197);
   opacity: 0.4;
   right: 856px;
@@ -63,7 +63,7 @@
   width: 30px;
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
-  animation: rotating-reverse 45s linear infinite;
+  animation: rotating-reverse 55s linear infinite;
   border-bottom: 40px solid rgb(105, 202, 165);
   opacity: 0.2;
   right: 780px;
@@ -73,7 +73,7 @@
 .triangle5 { 
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  animation: rotating 25s linear infinite;
+  animation: rotating 35s linear infinite;
   border-bottom: 20px solid rgb(120, 186, 144);
   opacity: 0.4;
   left: 690px;
@@ -83,7 +83,7 @@
 .triangle6 { 
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
-  animation: rotating 25s linear infinite;
+  animation: rotating 35s linear infinite;
   border-bottom: 40px solid rgb(20, 186, 144);
   opacity: 0.4;
   left: 1060px;
@@ -93,7 +93,7 @@
 .triangle7 {
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
-  animation: rotating-reverse 25s linear infinite;
+  animation: rotating-reverse 40s linear infinite;
   border-bottom: 40px solid #9cf196;
   opacity: 0.2;
   right: 1056px;
@@ -103,7 +103,7 @@
 .triangle8 {
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
-  animation: rotating-reverse 45s linear infinite;
+  animation: rotating-reverse 55s linear infinite;
   border-bottom: 40px solid rgb(105, 202, 165);
   opacity: 0.3;
   right: 80px;
@@ -113,7 +113,7 @@
 .triangle9 { 
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  animation: rotating 45s linear infinite;
+  animation: rotating 55s linear infinite;
   border-bottom: 20px solid rgb(120, 186, 144);
   opacity: 0.3;
   left: 630px;
@@ -123,7 +123,7 @@
 .triangle10 { 
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
-  animation: rotating 25s linear infinite;
+  animation: rotating 40s linear infinite;
   border-bottom: 40px solid rgb(20, 186, 144);
   opacity: 0.3;
   right: 1060px;
@@ -133,7 +133,7 @@
 .triangle11 {
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
-  animation: rotating-reverse 25s linear infinite;
+  animation: rotating-reverse 40s linear infinite;
   border-bottom: 40px solid #64c4ed;
   opacity: 0.2;
   left: 1356px;
@@ -146,7 +146,7 @@
   width: 30px;
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
-  animation: rotating 25s linear infinite;
+  animation: rotating 40s linear infinite;
   border-bottom: 40px solid rgb(105, 202, 165);
   opacity: 0.2;
   right: 380px;
@@ -157,7 +157,7 @@
 .triangle13 {
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
-  animation: rotating-reverse 25s linear infinite;
+  animation: rotating-reverse 40s linear infinite;
   border-bottom: 40px solid #4f81c7;
   opacity: 0.3;
   right: 556px;
@@ -168,7 +168,7 @@
 .triangle14 {
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
-  animation: rotating 25s linear infinite;
+  animation: rotating 40s linear infinite;
   border-bottom: 40px solid rgb(105, 202, 165);
   opacity: 0.2;
   right: 880px;
@@ -180,7 +180,7 @@
   width: 30px;
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
-  animation: rotating-reverse 45s linear infinite;
+  animation: rotating-reverse 55s linear infinite;
   border-bottom: 40px solid rgb(105, 202, 165);
   opacity: 0.2;
   left: 50px;
@@ -209,7 +209,7 @@
 	height: 30px;
   width: 30px;
   background-color: rgb(120, 186, 144);
-  animation: rotating 25s linear infinite;
+  animation: rotating 40s linear infinite;
   opacity: 0.3;
   left: 1264px;
   bottom: 40px;
@@ -229,7 +229,7 @@
 	height: 40px;
   width: 40px;
   background-color: #64c4ed;
-  animation: rotating 25s linear infinite;
+  animation: rotating 30s linear infinite;
   opacity: 0.3;
   right: 1123px;
   bottom: 780px;
@@ -249,7 +249,7 @@
   height: 50px;
   width: 50px;
   background-color: #4f81c7;
-  animation: rotating-reverse 25s linear infinite;
+  animation: rotating-reverse 30s linear infinite;
   opacity: 0.2;
   left: 1123px;
   top: 580px;
@@ -289,7 +289,7 @@
   height: 20px;
   width: 20px;
   background-color: #4baea0;
-  animation: rotating 25s linear infinite;
+  animation: rotating 30s linear infinite;
   right: 1123px;
   bottom: 550px;
 }
@@ -308,7 +308,7 @@
   height: 20px;
   width: 20px;
   background-color: #6bc5d2;
-  animation: rotating 25s linear infinite;
+  animation: rotating 30s linear infinite;
   opacity: 0.2;
   right: 76px;
   top: 700px;
@@ -328,7 +328,7 @@
   height: 20px;
   width: 20px;
   background-color: #6bc5d2;
-  animation: rotating 25s linear infinite;
+  animation: rotating 40s linear infinite;
   opacity: 0.3;
   right: 173px;
   top: 380px;
