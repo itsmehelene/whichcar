@@ -35,10 +35,11 @@ class Scraper
   end
 
   def fuel
-    match = @html_doc.search('.offer-car__resume li').first.text
-    if match
-      match.match(/(Essence|Diesel|Hybride|Electric|Electrique)/)
-      return match[0]
+    match = @html_doc.search('.offer-car__resume li').first.text.match(/(Essence|Diesel|Hybride|Electric|Electrique)/)
+    if match[0].strip.present?
+      match[0].strip
+    else
+      binding.pry
     end
   end
 
