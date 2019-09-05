@@ -31,7 +31,15 @@
   <div class="compare-items">
 
       <div class="compare-item" style="text-align: center;">
-        <%=@favourite.car.fuel%>
+        <% if @favourite.car.fuel == "Essence"%>
+          <%=image_tag 'gas.jpg',style:"width:70px ;height:100px"%>
+        <% elsif @favourite.car.fuel == "Diesel" %>
+            <%=image_tag 'diesel.jpg',style:"width:100px ;height:70px"%>
+        <% elsif @favourite.car.fuel == "Hybrid" %>
+          <%=image_tag 'hybrid.png',style:"width:100px ;height:70px"%>
+        <%else%>
+          <%=image_tag 'electric.png',style:"width:130px ;height:70px"%>
+        <%end%>
       </div>
 
   </div>
@@ -42,7 +50,11 @@
     <div class="compare-items">
 
       <div class="compare-item" style="text-align: center;">
-        <%=@favourite.car.gearbox.capitalize%>
+        <% if @favourite.car.gearbox == "automatique" %>
+        <p>Automatic</p>
+        <% else %>
+        <p>Manual</p>
+        <% end %>
       </div>
 
   </div>
@@ -53,18 +65,18 @@
     <div class="compare-items">
 
       <div class="compare-item" style="text-align: center;">
-        <%=@favourite.car.passengers%>
+        <%=image_tag 'driver.png',class:'avatar'%>+ <%=@favourite.car.passengers-1%>
       </div>
 
   </div>
 
   <br>
-  <h4 class="font-weight-bold">The Size Of The Trunk</h4>
+  <h4 class="font-weight-bold">Size Of The Trunk</h4>
   <hr>
     <div class="compare-items">
 
       <div class="compare-item" style="text-align: center;">
-        <%=@favourite.car.trunk_size%>
+        <%=@favourite.car.trunk_size%> L
       </div>
 
   </div>
@@ -72,16 +84,28 @@
   <br>
   <h4 class="font-weight-bold">Crit'air</h4>
   <hr>
-    <div class="compare-items">
 
-      <div class="compare-item" style="text-align: center;">
-        <%=@favourite.car.critair%>
+    <div class="compare-items" style="text-align: center;">
+          <div class="compare-item">
+            <% if @favourite.car.critair == 1%>
+              <%=image_tag 'critair1.jpg',class: 'critair_photo'%>
+            <% elsif @favourite.car.critair == 2 %>
+                <%=image_tag 'critair2.jpg',class: 'critair_photo'%>
+            <% elsif @favourite.car.critair == 3 %>
+              <%=image_tag 'critair3.jpg',class: 'critair_photo'%>
+            <% elsif @favourite.car.critair == 4 %>
+              <%=image_tag 'critair4.jpg',class: 'critair_photo'%>
+            <% elsif @favourite.car.critair == 5 %>
+              <%=image_tag 'critair5.jpg',class: 'critair_photo'%>
+            <%else%>
+              <%=image_tag 'critairhybrid.jpg',class: 'critair_photo'%>
+            <%end%>
+          </div>
       </div>
 
-  </div>
 
   <br>
-  <h4 class="font-weight-bold">The Year Of Releasing</h4>
+  <h4 class="font-weight-bold">Year Of Releasing</h4>
   <hr>
   <div class="compare-items">
 
@@ -91,6 +115,14 @@
 
   </div>
 
+  <br>
+  <h4 class="font-weight-bold">Power</h4>
+  <hr>
+  <div class="compare-item text-power" style="text-align: center;">
+    <%=@favourite.car.horse_power%> ch
+    so
+    <%=@favourite.car.power_fiscal%> CV
+  </div>
   <br>
   <h4 class="font-weight-bold">Price</h4>
   <hr>
