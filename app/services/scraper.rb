@@ -6,7 +6,7 @@ class Scraper
   def self.scrap_links
     links = []
     page = 1
-    while page < 80
+    while page < 2
       doc = Nokogiri::HTML(open("https://www.aramisauto.com/achat/recherche?page=#{page}").read)
       doc.search('.real-link.vehicle-info-link').each do |link|
         links << "https://www.aramisauto.com" + link.attribute('href').value
@@ -65,14 +65,14 @@ class Scraper
   def horse_power_fiscal
     if features.present?
       match = features.text.match(/\d+ CV/)
-      match[0] if match
+      match[0].split[0].to_i if match
     end
   end
 
   def horse_power
     if features.present?
       match = features.text.match(/\d+ ch/)
-      match[0] if match
+      match[0].split[0].to_i if match
     end
   end
 
