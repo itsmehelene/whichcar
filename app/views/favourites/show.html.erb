@@ -42,7 +42,11 @@
     <div class="compare-items">
 
       <div class="compare-item" style="text-align: center;">
-        <%=@favourite.car.gearbox.capitalize%>
+        <% if @favourite.car.gearbox == "automatique" %>
+        <p>Automatic</p>
+        <% else %>
+        <p>Manual</p>
+        <% end %>
       </div>
 
   </div>
@@ -59,12 +63,12 @@
   </div>
 
   <br>
-  <h4 class="font-weight-bold">The Size Of The Trunk</h4>
+  <h4 class="font-weight-bold">Size Of The Trunk</h4>
   <hr>
     <div class="compare-items">
 
       <div class="compare-item" style="text-align: center;">
-        <%=@favourite.car.trunk_size%>
+        <%=@favourite.car.trunk_size%> L
       </div>
 
   </div>
@@ -81,7 +85,7 @@
   </div>
 
   <br>
-  <h4 class="font-weight-bold">The Year Of Releasing</h4>
+  <h4 class="font-weight-bold">Year Of Releasing</h4>
   <hr>
   <div class="compare-items">
 
