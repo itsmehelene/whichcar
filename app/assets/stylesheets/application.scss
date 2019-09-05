@@ -30,4 +30,9 @@ body {
 
 .swal2-styled.swal2-confirm {
 	background: #50DBAF;
+	border-radius: 0;
+}
+
+.swal2-styled.swal2-cancel {
+	border-radius: 0;
 }
