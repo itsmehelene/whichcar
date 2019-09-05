@@ -97,8 +97,29 @@ body.favourites.show{
   font-size:24px;
   margin-bottom:30px;
 }
-h4{
-  text-align:center;
+
+hr{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+}
+.detail.pl-3 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
+.photos{
+  object-fit: contain;
+}
+
+.links{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+h3{
+  color:#454441;
 }
