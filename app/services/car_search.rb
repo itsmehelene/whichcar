@@ -22,7 +22,7 @@ class CarSearch
     filter_by_items        if @params.key? :items
     filter_by_ecology      if @params.key? :ecology
     filter_by_gearbox      if @params.key? :gearbox
-    # filter_by_power        if @params.key? :power
+    filter_by_power        if @params.key? :power
     @cars
   end
 
@@ -67,8 +67,9 @@ class CarSearch
     end
   end
 
-  # def filter_by_power
-  #   if @params[:power] == "Yes"
-  #     @cars = @cars.where("horse_power <= ?", 350 )
-  # end
+  def filter_by_power
+    if @params[:power] == "Yes"
+      @cars = @cars.where("horse_power <= ?", 400)
+    end
+  end
 end
