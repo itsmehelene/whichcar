@@ -68,10 +68,7 @@ class CarSearch
   end
 
   # def filter_by_power
-  #    if @params[:power] == "Yes"
-  #     @cars = @cars.where("power_fiscal <= ?", )
-  #   else
-  #     @cars = @cars.where(power: ["", ""])
-  #   end
+  #   if @params[:power] == "Yes"
+  #     @cars = @cars.where("horse_power <= ?", 350 )
   # end
 end
