@@ -68,7 +68,7 @@ button{
 .see_more {
   position: absolute;
   top: 111px;
-  right: -27px;
+  right: -29px;
 }
 
 
@@ -115,4 +115,9 @@ background-color: transparent;
 #myBtn:hover {
   background-color: #555;
   color:white; /* Add a dark-grey background on hover */
+}
+
+p {
+  margin-top:0;
+  margin-bottom: 0;
 }
