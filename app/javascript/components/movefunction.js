@@ -19,7 +19,7 @@ document.querySelectorAll("[name='search[items]']").forEach((input) => {
     setTimeout(function(){window.location = '#5'},500);
   })
 })
-document.querySelectorAll("[name='search[road]']").forEach((input) => {
+document.querySelectorAll("[name='search[power]']").forEach((input) => {
   input.addEventListener('click', () => {
     setTimeout(function(){window.location = '#6'},500);
   })
