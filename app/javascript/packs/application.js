@@ -18,7 +18,7 @@ $("#search_prices").ionRangeSlider({
   type: "double",
   grid: true,
   min: 0,
-  max: 250000,
+  max: 100000,
   from: 1000,
   to: 50000,
   step: 1000,
