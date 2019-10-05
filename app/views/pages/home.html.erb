@@ -26,7 +26,7 @@
 
         <div class="surveystep" id="1">
           <div class="question">
-            <%= f.input :passengers, collection: ["2", "5", "More than 5"], as: :radio_buttons, label: 'How many people will be in the car ?', include_hidden: false,id:'question' %>
+            <%= f.input :passengers, collection: ["2", "5", "More than 5"], as: :radio_buttons, label: 'How many people will be in the car ?',include_hidden: false, id:'question' %>
           </div>
           <div class="image">
             <%= image_tag "passengers.png", alt: "alttext" %>
@@ -35,20 +35,24 @@
         </div>
 
         <div class="surveystep" id="2">
-          <span><a href="#1" class="previous round">&#8249;</a></span>
-          <div class="survey-step-odd d-flex">
+          <span>
+            <a href="#1" class="previous round">&#8249;</a>
+          </span>
 
-          <div class="question">
-            <%= f.input :gearbox, collection: ["Auto", "Manual"], as: :radio_buttons, label: 'How do you want to drive your car ?', include_hidden: false  %>
+          <div class="survey-step-odd d-flex">
+            <div class="question">
+              <%= f.input :gearbox, collection: ["Auto", "Manual"], as: :radio_buttons, label: 'How do you want to drive your car ?', include_hidden: false  %>
+            </div>
+            <div class="image">
+              <%= image_tag "speed.png", alt: "alttext" %>
+            </div>
           </div>
-              <div class="image">
-            <%= image_tag "speed.png", alt: "alttext" %>
-          </div>
-          </div>
-           <span><a href="#3" class="next round">&#8250;</a></span>
+          <span>
+            <a href="#3" class="next round">&#8250;</a>
+          </span>
         </div>
 
-        <div class="surveystep" id="3">
+        <div class="surveystep three" id="3">
           <span><a href="#2" class="previous round">&#8249;</a></span>
           <div class="question">
             <%= f.input :ecology, collection: ["Yes", "No"], as: :radio_buttons, label: 'Do you want your car to be eco-friendly ?', include_hidden: false  %>
@@ -59,7 +63,7 @@
           <span><a href="#4" class="next round">&#8250;</a></span>
         </div>
 
-        <div class="surveystep" id="4">
+        <div class="surveystep four" id="4">
           <span><a href="#3" class="previous round">&#8249;</a></span>
           <div class="question">
             <%= f.input :items, collection: ["Not a lot", " A little bit", "A lot"], as: :radio_buttons, label: 'How much items will you carry ?', include_hidden: false  %>
@@ -84,7 +88,7 @@
         <div class="surveystep" id="6">
           <span><a href="#5" class="previous round">&#8249;</a></span>
           <div class="question" id="6">
-            <p style="color:black">Prices</p>
+            <p style="color:black" >Prices</p>
             <%=f.input :prices, label: false, input_html: {class: "js-range-slider"}, wrapper: false %>
             <%= f.submit "Find cars", class: "btn btn-primary" %>
           </div>
