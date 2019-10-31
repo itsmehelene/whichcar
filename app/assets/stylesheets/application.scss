@@ -8,14 +8,15 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-// Your CSS partials
-@import "components/*";
-@import "pages/*";
-
 @import "sweetalert";
 @import "sweetalert/themes/twitter";
 @import 'sweetalert2/src/sweetalert2.scss';
 @import "social-share-button";
+
+// Your CSS partials
+@import "components/*";
+@import "pages/*";
+
 
 body {
   // background-image: image-url('test3.jpeg');
@@ -24,9 +25,23 @@ body {
   // background-size: cover; /* Resize the background image to cover the entire container */
   // background-image: linear-gradient(to right, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
   background-color: white;
-  margin-top: 150px;
+  margin-top: 130px;
 }
 
+.swal2-styled.swal2-confirm {
+	background: #50DBAF;
+	border-radius: 0;
+}
 
+.swal2-styled.swal2-cancel {
+	border-radius: 0;
+}
 
+a {
+  color: black;
 
+  &:hover {
+    color: black;
+    text-decoration: none;
+  }
+}

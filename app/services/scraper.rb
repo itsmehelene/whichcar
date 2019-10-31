@@ -6,7 +6,7 @@ class Scraper
   def self.scrap_links
     links = []
     page = 1
-    while page < 77
+    while page < 80
       doc = Nokogiri::HTML(open("https://www.aramisauto.com/achat/recherche?page=#{page}").read)
       doc.search('.real-link.vehicle-info-link').each do |link|
         links << "https://www.aramisauto.com" + link.attribute('href').value
@@ -35,36 +35,52 @@ class Scraper
   end
 
   def fuel
-    match = @html_doc.search('.offer-car__resume li').first.text
-    if match
-      match.match(/(Essence|Diesel|Hybride|Electric|Electrique)/)
-      return match[0]
+    if resume.present?
+      match = resume.first.text.match(/(Essence|Diesel|Hybride|Electric|Electrique)/)
+      fuel = match[0].strip
+      p fuel
+      if fuel.present?
+        fuel
+      else
+        binding.pry
+        nil
+      end
     end
   end
 
   def gearbox
-    match = @html_doc.search('.offer-car__resume li').last.text.match(/(automatique|manuelle)/)
-    match[0] if match
+    if resume.present?
+      match = resume.last.text.match(/(automatique|manuelle)/)
+      match[0] if match
+    end
   end
 
   def truck
-    match = @html_doc.search('.technical-features__value').first.text.match(/[1-9][0-9][0-9]/)
-    match[0] if match
+    if features.present?
+      match = features.first.text.match(/[1-9][0-9][0-9]/)
+      match[0] if match
+    end
   end
 
   def horse_power_fiscal
-    match = @html_doc.search('.technical-features__value').text.match(/\d+ CV/)
-    match[0] if match
+    if features.present?
+      match = features.text.match(/\d+ CV/)
+      match[0].split[0].to_i if match
+    end
   end
 
   def horse_power
-    match = @html_doc.search('.technical-features__value').text.match(/\d+ ch/)
-    match[0] if match
+    if features.present?
+      match = features.text.match(/\d+ ch/)
+      match[0].split[0].to_i if match
+    end
   end
 
   def passengers
-    match = @html_doc.search('.technical-features__value').text.match(/\d/)
-    match[0] if match
+    if features.present?
+      match = features.text.match(/\d/)
+      match[0] if match
+    end
   end
 
   def critair
@@ -79,5 +95,13 @@ class Scraper
 
   def photo
     @html_doc.search('.showcase img').attribute('data-original').value
+  end
+
+  def features
+    @html_doc.search('.technical-features__value')
+  end
+
+  def resume
+    @html_doc.search('.offer-car__resume li')
   end
 end

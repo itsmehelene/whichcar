@@ -1,38 +1,25 @@
-<div class="home">
-  <div class="container-fav ">
+
+  <div class="container">
+  <div class="back" style="background-color: white;">
     <h2>Your Favourites</h2>
-    <div class="info_fav">
       <% @favourites.each do|f|%>
-        <div class="car_infos">
-          <div class="car_description">
-            <%= image_tag f.car.photo ,class: "photos"%>
-            <div class="info_car">
+          <div class="car_description align-items-center">
+            <div class="fav_photo"><%= image_tag f.car.photo ,class: "photos"%></div>
+            <div class="detail pl-3">
               <h3><%=f.car.model%></h3>
-              <div class="infos">
-                <div class="info ">
-                  <p>Passengers : <%=f.car.passengers%></p>
-                  <p>Year :       <%=f.car.year%></p>
-                  <p>Fuel :       <%=f.car.fuel%></p>
-                  <p>Crit'air :   <%=f.car.critair%></p>
-                  <p>Gearbox :    <%=f.car.gearbox%></p>
-                  <p>Trunk size : <%=f.car.trunk_size%> L</p>
-                  <h3>Price : <%=f.car.price%> €</h3>
-                  <%=link_to "Get more information",f.car.link%>
-
-                </div>
-
-                  <span></span>
-                  <span id="share"><%= social_share_button_tag(f.car.model) %></span>
-
+              <div class="links">
+                <%=link_to "> Click here if you want to see the details and Share!",favourite_path(f)%>
+                <%= link_to '> Delete this favourite',favourite_path(f), :method => :delete, :onclick => "return confirm('Are you sure you want to delete this post?')" %>
               </div>
             </div>
           </div>
-        </div>
+    <hr>
       <%end%>
+
     </div>
+
   </div>
+
+
+
 </div>
-
-
-
-

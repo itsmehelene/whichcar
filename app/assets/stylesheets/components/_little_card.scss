@@ -1,23 +1,23 @@
 .cards{
-  margin-top:3%;
-  margin-left:10%;
-  margin-right:10%;
+  // margin-top: 3%;
+  margin-left: 50px;
+  margin-right: 100px;
   display:grid;
-  grid-template-columns:1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 15px;
 }
 
 .card_car {
-
   flex-grow:1;
-  width: 500px;
-  height: 150px;
+  width: 100%;
+  height: 100%;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: $our-color;
+  padding:10px;
 
     // display: flex;
     // border-radius: 5px;
@@ -27,8 +27,6 @@
 
   .photo{
     img {
-    padding:5px;
-      border-radius: 5px 5px 0 0;
       width:200px;
       height: 140px;
       }
@@ -39,6 +37,12 @@
     text-align:left;
     flex-grow: 1;
     padding:0;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    justify-content: space-between;
+    align-self: stretch;
   }
 
   .options {
@@ -61,13 +65,20 @@ button{
   }
 }
 
+.see_more {
+  position: absolute;
+  top: 111px;
+  right: -29px;
+}
+
+
 .modal-body {
 background-color: transparent;
 }
 
 @media(max-width: 1500px) {
   .cards {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -77,11 +88,17 @@ background-color: transparent;
   }
 }
 
+@media(max-width: 750px) {
+  .cards {
+    grid-template-columns: 2fr;
+  }
+}
+
 #myBtn {
   // display: none; /* Hidden by default */
+  // bottom: 60px; /* Place the button at the bottom of the page */
+  // right: 60px; /* Place the button 30px from the right */
   position: fixed; /* Fixed/sticky position */
-  bottom: 60px; /* Place the button at the bottom of the page */
-  right: 60px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
@@ -90,9 +107,17 @@ background-color: transparent;
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
   font-size: 18px; /* Increase font size */
+  transform: rotate(-90deg);  
+  top: 370px;
+  right: 0px; 
 }
 
 #myBtn:hover {
   background-color: #555;
   color:white; /* Add a dark-grey background on hover */
+}
+
+p {
+  margin-top:0;
+  margin-bottom: 0;
 }

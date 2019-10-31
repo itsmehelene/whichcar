@@ -11,13 +11,14 @@ const needAuth = () => {
         text: "Do you want to log in ?",
         type: 'warning',
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
+        confirmButtonColor: '#50DBAF',
         cancelButtonColor: '#d33',
         confirmButtonText: 'Login'
       }).then((result) => {
         if (result.value) {
           console.log("on veut rediriger")
           document.cookie = 'open_modal_when_sign_in=' + carId
+          document.cookie = 'search_url=' + window.location.href
           window.location = "user/sign_in"
         }
       })
@@ -25,8 +26,4 @@ const needAuth = () => {
   })
 }
 
-
 export default needAuth
-
-
-

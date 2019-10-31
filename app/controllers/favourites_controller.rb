@@ -1,6 +1,12 @@
 class FavouritesController < ApplicationController
+    skip_before_action :authenticate_user!, only: :show
+
   def index
-    @favourites = Favourite.all
+    @favourites = current_user.favourites
+  end
+
+  def show
+    @favourite = Favourite.find(params[:id])
   end
 
   def create
@@ -12,23 +18,6 @@ class FavouritesController < ApplicationController
   def destroy
     @favourite = Favourite.find(params[:id])
     @car = @favourite.car
-    @favourite.destroy
+    redirect_to favourites_path if @favourite.destroy
   end
 end
-
-
-# def create
-#   @car = Car.find(params[:car_id])
-#   @favourite = Favourite.new(car: @car, user: current_user)
-#   if @favourite.save
-#     respond_to do |format|
-#       format.html { redirect_to root_path() }
-#       format.js  # <-- will render `app/views/favourites/create.js.erb`
-#     end
-#   else
-#     respond_to do |format|
-#       format.html { redirect_to root_path() }
-#       format.js  # <-- idem
-#     end
-#   end
-# end

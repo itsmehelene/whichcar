@@ -1,4 +1,5 @@
 <div class="container">
+<div class="back" style="background-color: white;">
 <div class="container_compare">
   <div class="compare-items">
     <%@cars.each do |car|%>
@@ -72,7 +73,7 @@
   </div>
 
   <br>
-  <h4 class="font-weight-bold">The Size Of The Trunk</h4>
+  <h4 class="font-weight-bold">Size Of The Trunk</h4>
   <hr>
   <div class="compare-items text">
     <%@cars.each do |car|%>
@@ -108,7 +109,7 @@
 
 
   <br>
-  <h4 class="font-weight-bold">The Year Of Releasing</h4>
+  <h4 class="font-weight-bold">Year Of Releasing</h4>
   <hr>
   <div class="compare-items">
     <%@cars.each do |car|%>
@@ -130,5 +131,10 @@
       </div>
     <%end%>
   </div>
+  <!-- redirect to seach result   -->
+    <button style="margin-left: 30px; padding: 10px; margin-top: 30px;">
+      <%= link_to '< Back to results', request.referrer %>
+    </button>
+</div>
 </div>
 </div>

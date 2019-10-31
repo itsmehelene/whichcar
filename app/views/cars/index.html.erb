@@ -2,8 +2,7 @@
   <div class="cards">
     <button onclick="topFunction()" id="myBtn" class="btn btn-primary" title="Go to compare">Compare</button>
       <% @cars.each do |car|%>
-      <div class="col_12 col-lg-6 col-xl-4">
-        <div data-aos="flip-right" data-aos-duration="1000">
+        <div data-aos="flip-right" data-aos-duration="1200">
           <div class="card_car">
             <div class="photo">
               <%= image_tag "#{car.photo}" %>
@@ -12,12 +11,14 @@
             <div class="cards_infos">
               <h6><strong><%=car.model.upcase%></strong></h6>
               <% if car.car_type == "0km"%>
-              <p>New</p>
+                <p>New</p>
               <%else%>
-              <%=car.car_type%>
+                <%=car.car_type.to_s.capitalize%>
               <%end%>
-               <h6><%=car.price%> €</h6>
-              <button type="button" id= "<%= car.id %>" data-toggle="modal" data-target="#myModal<%= car.id %>"> See More >
+                <p>Passengers : <%=car.passengers%></p>
+                <p>Fuel :       <%=car.fuel%></p>
+                <h6><%=car.price%> €</h6>
+              <button type="button" id= "<%= car.id %>" data-toggle="modal" data-target="#myModal<%= car.id %>" class='see_more'> See More >
               </button>
             </div>
             <div class='options'>
@@ -28,7 +29,6 @@
             </div>
           </div>
         </div>
-      </div>
       <%end%>
   </div>
 </form>
@@ -59,12 +59,12 @@
                      <p>Crit'air :   <%=car.critair%></p>
                      <p>Gearbox :    <%=car.gearbox%></p>
                      <p>Trunk size : <%=car.trunk_size%> L</p>
-                     <p>Horse Power : <%=car.horse_power%></p>
-                     <p>Din power : <%=car.power_fiscal%></p>
+                     <p>Horse Power : <%=car.horse_power%> ch</p>
+                     <p>Din power : <%=car.power_fiscal%> CV</p>
                      <h3>Price :     <%=car.price%> €</h3>
                     </div>
                     <div class="link-infos">
-                    <%=link_to "More infos", car.link, class: 'btn btn-primary'%>
+                    <%=link_to "Favourites", favourites_path, class: 'btn btn-primary more_infos'%>
                    </div>
                 </div>
 

@@ -26,6 +26,7 @@ puts "seed is starting"
 links = Scraper.scrap_links
 links.each do |link|
   scraper = Scraper.new(link)
+
   Car.create!(
     model: scraper.model,
     passengers: scraper.passengers,

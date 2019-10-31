@@ -1,4 +1,4 @@
-// en plus de la description  ajouter favoris
+// en plus de la description ajouter favoris
 .card_description {
     display: flex;
     border-radius: 5px;
@@ -6,37 +6,35 @@
     padding: 5px;
 }
 
-    .photo {
-      display: flex;
-      align-items: center;
-      margin-left: 15px;
+.photo {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
 
-      img {
-        width: 500px;
-        height: 300px;
-      }
-    }
+  img {
+    width: 500px;
+    height: 300px;
+  }
+}
 
-    .card_infos {
-      display: flex;
-      padding-left: 25px;
-      flex-grow: 1;
+.card_infos {
+  display: flex;
+  padding-left: 25px;
+  flex-grow: 1;
 
-      p {
-        margin-bottom: 9px;
-      }
-
-      h2 {
-        margin-bottom: 12px
-      }
-
-
-      h3 {
-        display:flex;
-        align-content: flex-end;
-
+  p {
+    margin-bottom: 9px;
   }
 
+  h2 {
+    margin-bottom: 12px
+  }
+
+
+  h3 {
+    display:flex;
+    align-content: flex-end;
+  }
 
   .link-infos {
     justify-content: flex-end;
@@ -49,6 +47,15 @@
     margin-left: 5px;
   }
 
+  .btn .btn-primary .see_more{
+    width: max-content;
+  }
 
+  .more_infos{
+     width: max-content;
+     position: absolute;
+     bottom: 51px;
+     right: 51px;
+  }
 }
 

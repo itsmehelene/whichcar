@@ -4,11 +4,18 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     if cookies[:search_url]
+      redirect_url = cookies[:search_url]
+
       if cookies[:open_modal_when_sign_in]
-        "#{cookies[:search_url]}&openModal=#{cookies[:open_modal_when_sign_in]}"
-      else
-        cookies[:search_url]
+        redirect_url += "&openModal=#{cookies[:open_modal_when_sign_in]}"
       end
+
+      redirect_url.gsub!(';', '%3B')
+
+      cookies[:open_modal_when_sign_in] = ''
+      cookies[:search_url] = ''
+
+      redirect_url
     else
       super
     end
