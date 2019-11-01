@@ -27,7 +27,7 @@
 
   .photo{
     img {
-      width:200px;
+      width:180px;
       height: 140px;
       }
   }
@@ -107,9 +107,9 @@ background-color: transparent;
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
   font-size: 18px; /* Increase font size */
-  transform: rotate(-90deg);  
+  transform: rotate(-90deg);
   top: 370px;
-  right: 0px; 
+  right: 0px;
 }
 
 #myBtn:hover {

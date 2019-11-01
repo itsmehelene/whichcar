@@ -4,18 +4,19 @@ body.registrations.new {
   .bigcontainer {
     display: flex;
     justify-content: center;
-
+    max-height: -webkit-fill-available;
   }
 
   .othercontainer {
 
   background-color: white;
+  padding: 20px 0;
   width: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 50px;
-  height: 600px;
+  height: 100%;
   border-radius: 5px;
   }
 
@@ -43,4 +44,9 @@ body.registrations.new {
     margin-left: 20px;
     margin-bottom: 20px;
   }
+
+  .nav-link:hover {
+  color:white;
+
+}
 }
