@@ -16,7 +16,7 @@ body.pages.home {
   .wrapper {
     overflow: scroll;
     scroll-behavior: smooth;
-  
+
     .previous.round {
       // padding: 40px;
       width: 60px;
@@ -125,6 +125,9 @@ body.pages.home {
 
 
 @media(min-width: 1100px) {
+  .nav-link{
+    font-size:20px;
+  }
   .scrolling {
     padding-top: 10%;
   }
@@ -141,10 +144,10 @@ body.pages.home {
   }
 
   h2 {
-    font-size: 50px;
+    font-size: 40px;
   }
 
-  a {
+  .fa-chevron-down {
     font-size: 32px;
   }
 
@@ -159,6 +162,10 @@ body.pages.home {
     font-size: 160px;
   }
 
+  .collection_radio_buttons {
+    font-size: smaller;
+  }
+
   .next.round {
     padding: 40px;
     width: 60px;
@@ -167,7 +174,7 @@ body.pages.home {
   }
 
    .col-form-label {
-    font-size: inherit;  
+    font-size: inherit;
     margin-bottom: 20px;
   }
 
@@ -184,7 +191,7 @@ body.pages.home {
 
     h1 {
       font-size: 100px;
-      margin-top: 60px; 
+      margin-top: 60px;
     }
 
     h2 {
@@ -203,15 +210,15 @@ body.pages.home {
   .surveystep {
     padding-left: 20px;
   }
-  
+
 
   .col-form-label {
-    font-size: inherit;  
+    font-size: inherit;
     margin-bottom: 20px;
   }
 
   p {
-    font-size: 35px; 
+    font-size: 35px;
   }
 
   .previous.round {
@@ -250,7 +257,7 @@ body.pages.home {
 
   .scrolling {
     padding-top: 40%;
-  
+
     a {
       font-size: 32px;
     }
@@ -273,19 +280,19 @@ body.pages.home {
   }
 
   .col-form-label {
-    font-size: inherit;  
+    font-size: inherit;
   }
 
   p {
-    font-size: larger; 
+    font-size: larger;
   }
-  
+
   label {
     font-size: 30px;
   }
 
   .image{
-    display: flex; 
+    display: flex;
     align-items: center;
   }
 
@@ -299,7 +306,7 @@ body.pages.home {
 @media(max-width: 450px) {
 
   h1 {
-    margin-top: 120px; 
+    margin-top: 120px;
     font-size: 65px;
   }
 
@@ -309,13 +316,13 @@ body.pages.home {
   }
 
   a {
-    font-size: 20px; 
+    font-size: 20px;
   }
 
   .scrolling {
     padding-top: 30%;
   }
-  
+
   .form-post {
     width: 1950px;
     margin: 0px 20px 0px 25px;
@@ -338,18 +345,18 @@ body.pages.home {
       display: none;
     }
   }
-  
+
   label {
     font-size: 20px;
   }
-  
+
   .col-form-label {
-    font-size: 22px;  
+    font-size: 22px;
     margin-bottom: 20px;
   }
 
   p {
-    font-size: 22px; 
+    font-size: 22px;
   }
 
   .previous.round {
@@ -362,13 +369,13 @@ body.pages.home {
     padding: 0px;
     font-size: 120px;
   }
-  
+
   .form-check {
     width: 180px;
   }
 
   .btn {
-    font-size: 20px; 
+    font-size: 20px;
   }
 
   .footer {
@@ -442,7 +449,7 @@ body.pages.home {
 //       font-size:24px;
 //       text-decoration:none;
 //     }
-  
+
 //     .image img{
 //       display:none;
 //     }
